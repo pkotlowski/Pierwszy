@@ -1,0 +1,1816 @@
+Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (138.2ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.1ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (67.9ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.2ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateFortunes (20121004114710)
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36m (0.9ms)[0m  [1mCREATE TABLE "fortunes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "quotation" text, "source" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.3ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20121004114710')
+  [1m[36m (119.4ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.6ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("fortunes")
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (26.4ms)[0m  [1mINSERT INTO "fortunes" ("created_at", "quotation", "source", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Thu, 04 Oct 2012 11:51:29 UTC +00:00], ["quotation", "I hear and I forget. I see and I remember. I do and I understand."], ["source", nil], ["updated_at", Thu, 04 Oct 2012 11:51:29 UTC +00:00]]
+  [1m[35m (119.6ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.1ms)[0m  INSERT INTO "fortunes" ("created_at", "quotation", "source", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Thu, 04 Oct 2012 11:51:29 UTC +00:00], ["quotation", "Everything has its beauty but not everyone sees it."], ["source", nil], ["updated_at", Thu, 04 Oct 2012 11:51:29 UTC +00:00]]
+  [1m[36m (82.3ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  begin transaction
+  [1m[36mSQL (0.9ms)[0m  [1mINSERT INTO "fortunes" ("created_at", "quotation", "source", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Thu, 04 Oct 2012 11:51:29 UTC +00:00], ["quotation", "It does not matter how slowly you go so long as you do not stop."], ["source", nil], ["updated_at", Thu, 04 Oct 2012 11:51:29 UTC +00:00]]
+  [1m[35m (84.3ms)[0m  commit transaction
+  [1m[36m (0.2ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "fortunes" ("created_at", "quotation", "source", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Thu, 04 Oct 2012 11:51:30 UTC +00:00], ["quotation", "Study the past if you would define the future."], ["source", nil], ["updated_at", Thu, 04 Oct 2012 11:51:30 UTC +00:00]]
+  [1m[36m (95.4ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-04 13:52:07 +0200
+Connecting to database specified by database.yml
+Processing by FortunesController#index as HTML
+  [1m[36mFortune Load (0.1ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" [0m
+  Rendered fortunes/index.html.erb within layouts/application (9.9ms)
+Compiled fortunes.css  (0ms)  (pid 27493)
+Compiled scaffold.css  (0ms)  (pid 27493)
+Compiled application.css  (39ms)  (pid 27493)
+Compiled jquery.js  (7ms)  (pid 27493)
+Compiled jquery_ujs.js  (0ms)  (pid 27493)
+Compiled fortunes.js  (84ms)  (pid 27493)
+Compiled application.js  (146ms)  (pid 27493)
+Completed 200 OK in 352ms (Views: 294.2ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/fortunes/1/edit" for 127.0.0.1 at 2012-10-04 13:58:32 +0200
+Processing by FortunesController#edit as HTML
+  Parameters: {"id"=>"1"}
+  [1m[35mFortune Load (0.2ms)[0m  SELECT "fortunes".* FROM "fortunes" WHERE "fortunes"."id" = ? LIMIT 1  [["id", "1"]]
+  Rendered fortunes/_form.html.erb (10.0ms)
+  Rendered fortunes/edit.html.erb within layouts/application (15.6ms)
+Completed 200 OK in 25ms (Views: 21.9ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-04 14:45:04 +0200
+Connecting to database specified by database.yml
+Processing by FortunesController#index as HTML
+  [1m[36mFortune Load (0.1ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" [0m
+  Rendered fortunes/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 142ms (Views: 86.6ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/fortunes/new" for 127.0.0.1 at 2012-10-04 14:45:10 +0200
+Processing by FortunesController#new as HTML
+  Rendered fortunes/_form.html.erb (10.3ms)
+  Rendered fortunes/new.html.erb within layouts/application (17.2ms)
+Completed 200 OK in 27ms (Views: 26.0ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/fortunes" for 127.0.0.1 at 2012-10-04 14:45:19 +0200
+Processing by FortunesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Aet19kdlHixRav3XKadnPA9TuFgzN7OT7ZSTTRMrMxc=", "fortune"=>{"quotation"=>"jncjdncd", "source"=>"ddn"}, "commit"=>"Create Fortune"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (30.8ms)[0m  [1mINSERT INTO "fortunes" ("created_at", "quotation", "source", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Thu, 04 Oct 2012 12:45:19 UTC +00:00], ["quotation", "jncjdncd"], ["source", "ddn"], ["updated_at", Thu, 04 Oct 2012 12:45:19 UTC +00:00]]
+  [1m[35m (111.3ms)[0m  commit transaction
+Redirected to http://localhost:3000/fortunes/5
+Completed 302 Found in 150ms (ActiveRecord: 142.2ms)
+
+
+Started GET "/fortunes/5" for 127.0.0.1 at 2012-10-04 14:45:19 +0200
+Processing by FortunesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mFortune Load (0.3ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" WHERE "fortunes"."id" = ? LIMIT 1[0m  [["id", "5"]]
+  Rendered fortunes/show.html.erb within layouts/application (1.6ms)
+Completed 200 OK in 14ms (Views: 10.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2012-10-04 14:45:23 +0200
+Processing by FortunesController#index as HTML
+  [1m[35mFortune Load (0.5ms)[0m  SELECT "fortunes".* FROM "fortunes" 
+  Rendered fortunes/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 18ms (Views: 15.3ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-04 18:32:13 +0200
+Connecting to database specified by database.yml
+Processing by FortunesController#index as HTML
+  [1m[36mFortune Load (0.1ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" [0m
+  Rendered fortunes/index.html.erb within layouts/application (28.0ms)
+Completed 200 OK in 324ms (Views: 264.3ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-04 18:34:14 +0200
+Processing by FortunesController#index as HTML
+  [1m[35mFortune Load (0.2ms)[0m  SELECT "fortunes".* FROM "fortunes" 
+  Rendered fortunes/index.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 18ms (Views: 15.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-04 18:41:49 +0200
+Connecting to database specified by database.yml
+Processing by FortunesController#index as HTML
+  [1m[36mFortune Load (0.1ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" [0m
+  Rendered fortunes/index.html.erb within layouts/application (32.5ms)
+Completed 200 OK in 144ms (Views: 87.1ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-04 18:44:58 +0200
+Connecting to database specified by database.yml
+Processing by FortunesController#index as HTML
+  [1m[36mFortune Load (0.1ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" [0m
+  Rendered fortunes/index.html.erb within layouts/application (33.0ms)
+Completed 200 OK in 144ms (Views: 87.7ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-04 18:55:57 +0200
+Processing by FortunesController#index as HTML
+  [1m[35mFortune Load (0.5ms)[0m  SELECT "fortunes".* FROM "fortunes" 
+  Rendered fortunes/index.html.erb within layouts/application (22.7ms)
+Completed 500 Internal Server Error in 28ms
+
+ActionView::Template::Error (undefined method `current_page' for nil:NilClass):
+    21: </table>
+    22: 
+    23: <div id="paginator">
+    24: <%= paginate @posts, :remote => true %>
+    25: 
+    26: 
+    27: <br />
+  app/views/fortunes/index.html.erb:24:in `_app_views_fortunes_index_html_erb___690865793785602902_37337720'
+  app/controllers/fortunes_controller.rb:7:in `index'
+
+
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (5.3ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.7ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (23.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-04 19:21:52 +0200
+Processing by FortunesController#index as HTML
+  [1m[36mFortune Load (0.2ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" [0m
+  Rendered fortunes/index.html.erb within layouts/application (6.9ms)
+Completed 500 Internal Server Error in 11ms
+
+ActionView::Template::Error (undefined method `current_page' for nil:NilClass):
+    21: </table>
+    22: 
+    23: <div id="paginator">
+    24: <%= paginate @posts, :remote => true %>
+    25: 
+    26: 
+    27: <br />
+  app/views/fortunes/index.html.erb:24:in `_app_views_fortunes_index_html_erb___690865793785602902_37337720'
+  app/controllers/fortunes_controller.rb:7:in `index'
+
+
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-04 19:21:52 +0200
+Processing by FortunesController#index as HTML
+  [1m[35mFortune Load (0.5ms)[0m  SELECT "fortunes".* FROM "fortunes" 
+  Rendered fortunes/index.html.erb within layouts/application (9.6ms)
+Completed 500 Internal Server Error in 18ms
+
+ActionView::Template::Error (undefined method `current_page' for nil:NilClass):
+    21: </table>
+    22: 
+    23: <div id="paginator">
+    24: <%= paginate @posts, :remote => true %>
+    25: 
+    26: 
+    27: <br />
+  app/views/fortunes/index.html.erb:24:in `_app_views_fortunes_index_html_erb___690865793785602902_37337720'
+  app/controllers/fortunes_controller.rb:7:in `index'
+
+
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-04 19:21:53 +0200
+Processing by FortunesController#index as HTML
+  [1m[36mFortune Load (0.2ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" [0m
+  Rendered fortunes/index.html.erb within layouts/application (6.7ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (undefined method `current_page' for nil:NilClass):
+    21: </table>
+    22: 
+    23: <div id="paginator">
+    24: <%= paginate @posts, :remote => true %>
+    25: 
+    26: 
+    27: <br />
+  app/views/fortunes/index.html.erb:24:in `_app_views_fortunes_index_html_erb___690865793785602902_37337720'
+  app/controllers/fortunes_controller.rb:7:in `index'
+
+
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-04 19:21:53 +0200
+Processing by FortunesController#index as HTML
+  [1m[35mFortune Load (0.2ms)[0m  SELECT "fortunes".* FROM "fortunes" 
+  Rendered fortunes/index.html.erb within layouts/application (6.9ms)
+Completed 500 Internal Server Error in 10ms
+
+ActionView::Template::Error (undefined method `current_page' for nil:NilClass):
+    21: </table>
+    22: 
+    23: <div id="paginator">
+    24: <%= paginate @posts, :remote => true %>
+    25: 
+    26: 
+    27: <br />
+  app/views/fortunes/index.html.erb:24:in `_app_views_fortunes_index_html_erb___690865793785602902_37337720'
+  app/controllers/fortunes_controller.rb:7:in `index'
+
+
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-04 19:21:54 +0200
+Processing by FortunesController#index as HTML
+  [1m[36mFortune Load (0.3ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" [0m
+  Rendered fortunes/index.html.erb within layouts/application (7.1ms)
+Completed 500 Internal Server Error in 14ms
+
+ActionView::Template::Error (undefined method `current_page' for nil:NilClass):
+    21: </table>
+    22: 
+    23: <div id="paginator">
+    24: <%= paginate @posts, :remote => true %>
+    25: 
+    26: 
+    27: <br />
+  app/views/fortunes/index.html.erb:24:in `_app_views_fortunes_index_html_erb___690865793785602902_37337720'
+  app/controllers/fortunes_controller.rb:7:in `index'
+
+
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-04 19:23:15 +0200
+Processing by FortunesController#index as HTML
+  [1m[35mFortune Load (0.6ms)[0m  SELECT "fortunes".* FROM "fortunes" 
+  Rendered fortunes/index.html.erb within layouts/application (7.0ms)
+Completed 500 Internal Server Error in 13ms
+
+ActionView::Template::Error (undefined method `current_page' for nil:NilClass):
+    21: </table>
+    22: 
+    23: <div id="paginator">
+    24: <%= paginate @posts, :remote => true %>
+    25: 
+    26: 
+    27: <br />
+  app/views/fortunes/index.html.erb:24:in `_app_views_fortunes_index_html_erb___690865793785602902_37337720'
+  app/controllers/fortunes_controller.rb:7:in `index'
+
+
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-04 19:25:55 +0200
+Processing by FortunesController#index as HTML
+  [1m[36mFortune Load (0.2ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" [0m
+  Rendered fortunes/index.html.erb within layouts/application (62.5ms)
+Completed 500 Internal Server Error in 67ms
+
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object that returns a valid partial path.):
+    22: 
+    23: <!-zmiany>
+    24: <tbody id="posts">
+    25: <%= render @posts %>
+    26: 
+    27: <div id="paginator">
+    28: <%= paginate @posts, :remote => true %>
+  app/views/fortunes/index.html.erb:25:in `_app_views_fortunes_index_html_erb___690865793785602902_42329100'
+  app/controllers/fortunes_controller.rb:7:in `index'
+
+
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-04 19:25:56 +0200
+Processing by FortunesController#index as HTML
+  [1m[35mFortune Load (0.7ms)[0m  SELECT "fortunes".* FROM "fortunes" 
+  Rendered fortunes/index.html.erb within layouts/application (7.0ms)
+Completed 500 Internal Server Error in 16ms
+
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object that returns a valid partial path.):
+    22: 
+    23: <!-zmiany>
+    24: <tbody id="posts">
+    25: <%= render @posts %>
+    26: 
+    27: <div id="paginator">
+    28: <%= paginate @posts, :remote => true %>
+  app/views/fortunes/index.html.erb:25:in `_app_views_fortunes_index_html_erb___690865793785602902_42329100'
+  app/controllers/fortunes_controller.rb:7:in `index'
+
+
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-04 19:25:56 +0200
+Processing by FortunesController#index as HTML
+  [1m[36mFortune Load (0.3ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" [0m
+  Rendered fortunes/index.html.erb within layouts/application (7.6ms)
+Completed 500 Internal Server Error in 14ms
+
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object that returns a valid partial path.):
+    22: 
+    23: <!-zmiany>
+    24: <tbody id="posts">
+    25: <%= render @posts %>
+    26: 
+    27: <div id="paginator">
+    28: <%= paginate @posts, :remote => true %>
+  app/views/fortunes/index.html.erb:25:in `_app_views_fortunes_index_html_erb___690865793785602902_42329100'
+  app/controllers/fortunes_controller.rb:7:in `index'
+
+
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-04 19:33:33 +0200
+Processing by FortunesController#index as HTML
+  [1m[35mFortune Load (0.2ms)[0m  SELECT "fortunes".* FROM "fortunes" 
+  Rendered fortunes/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 23ms (Views: 21.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-04 19:35:54 +0200
+Processing by FortunesController#index as HTML
+  [1m[36mFortune Load (0.2ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" [0m
+  Rendered fortunes/index.html.erb within layouts/application (6.3ms)
+Compiled application.js  (0ms)  (pid 2379)
+Completed 200 OK in 91ms (Views: 89.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-04 19:35:55 +0200
+Processing by FortunesController#index as HTML
+  [1m[35mFortune Load (0.5ms)[0m  SELECT "fortunes".* FROM "fortunes" 
+  Rendered fortunes/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 15ms (Views: 12.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-04 19:35:55 +0200
+Processing by FortunesController#index as HTML
+  [1m[36mFortune Load (0.2ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" [0m
+  Rendered fortunes/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-04 19:37:11 +0200
+Processing by FortunesController#index as HTML
+  [1m[35mFortune Load (0.4ms)[0m  SELECT "fortunes".* FROM "fortunes" 
+  Rendered fortunes/index.html.erb within layouts/application (3.5ms)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object that returns a valid partial path.):
+    19:   </tr>
+    20: 
+    21: <tbody id="posts">
+    22: <%= render @posts %>
+    23: 
+    24: <% end %>
+    25: </table>
+  app/views/fortunes/index.html.erb:22:in `block in _app_views_fortunes_index_html_erb___690865793785602902_41108960'
+  app/views/fortunes/index.html.erb:12:in `each'
+  app/views/fortunes/index.html.erb:12:in `_app_views_fortunes_index_html_erb___690865793785602902_41108960'
+  app/controllers/fortunes_controller.rb:7:in `index'
+
+
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-04 19:39:25 +0200
+Processing by FortunesController#index as HTML
+  [1m[36mFortune Load (0.2ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" [0m
+  Rendered fortunes/index.html.erb within layouts/application (2.5ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object that returns a valid partial path.):
+    19:   </tr>
+    20: 
+    21: <tbody id="posts">
+    22: <%= render @posts %>
+    23: 
+    24: <% end %>
+    25: </table>
+  app/views/fortunes/index.html.erb:22:in `block in _app_views_fortunes_index_html_erb___690865793785602902_41108960'
+  app/views/fortunes/index.html.erb:12:in `each'
+  app/views/fortunes/index.html.erb:12:in `_app_views_fortunes_index_html_erb___690865793785602902_41108960'
+  app/controllers/fortunes_controller.rb:7:in `index'
+
+
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-04 19:40:16 +0200
+Processing by FortunesController#index as HTML
+  [1m[35mFortune Load (0.2ms)[0m  SELECT "fortunes".* FROM "fortunes" 
+  Rendered fortunes/index.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object that returns a valid partial path.):
+    19:   </tr>
+    20: 
+    21: <tbody id="posts">
+    22: <%= render @posts %>
+    23: 
+    24: <% end %>
+    25: </table>
+  app/views/fortunes/index.html.erb:22:in `block in _app_views_fortunes_index_html_erb___690865793785602902_41108960'
+  app/views/fortunes/index.html.erb:12:in `each'
+  app/views/fortunes/index.html.erb:12:in `_app_views_fortunes_index_html_erb___690865793785602902_41108960'
+  app/controllers/fortunes_controller.rb:7:in `index'
+
+
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-04 19:40:17 +0200
+Processing by FortunesController#index as HTML
+  [1m[36mFortune Load (0.2ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" [0m
+  Rendered fortunes/index.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object that returns a valid partial path.):
+    19:   </tr>
+    20: 
+    21: <tbody id="posts">
+    22: <%= render @posts %>
+    23: 
+    24: <% end %>
+    25: </table>
+  app/views/fortunes/index.html.erb:22:in `block in _app_views_fortunes_index_html_erb___690865793785602902_41108960'
+  app/views/fortunes/index.html.erb:12:in `each'
+  app/views/fortunes/index.html.erb:12:in `_app_views_fortunes_index_html_erb___690865793785602902_41108960'
+  app/controllers/fortunes_controller.rb:7:in `index'
+
+
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-04 19:40:17 +0200
+Processing by FortunesController#index as HTML
+  [1m[35mFortune Load (0.2ms)[0m  SELECT "fortunes".* FROM "fortunes" 
+  Rendered fortunes/index.html.erb within layouts/application (2.4ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object that returns a valid partial path.):
+    19:   </tr>
+    20: 
+    21: <tbody id="posts">
+    22: <%= render @posts %>
+    23: 
+    24: <% end %>
+    25: </table>
+  app/views/fortunes/index.html.erb:22:in `block in _app_views_fortunes_index_html_erb___690865793785602902_41108960'
+  app/views/fortunes/index.html.erb:12:in `each'
+  app/views/fortunes/index.html.erb:12:in `_app_views_fortunes_index_html_erb___690865793785602902_41108960'
+  app/controllers/fortunes_controller.rb:7:in `index'
+
+
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-04 19:40:17 +0200
+Processing by FortunesController#index as HTML
+  [1m[36mFortune Load (0.4ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" [0m
+  Rendered fortunes/index.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 7ms
+
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object that returns a valid partial path.):
+    19:   </tr>
+    20: 
+    21: <tbody id="posts">
+    22: <%= render @posts %>
+    23: 
+    24: <% end %>
+    25: </table>
+  app/views/fortunes/index.html.erb:22:in `block in _app_views_fortunes_index_html_erb___690865793785602902_41108960'
+  app/views/fortunes/index.html.erb:12:in `each'
+  app/views/fortunes/index.html.erb:12:in `_app_views_fortunes_index_html_erb___690865793785602902_41108960'
+  app/controllers/fortunes_controller.rb:7:in `index'
+
+
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-04 19:40:18 +0200
+Processing by FortunesController#index as HTML
+  [1m[35mFortune Load (0.5ms)[0m  SELECT "fortunes".* FROM "fortunes" 
+  Rendered fortunes/index.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 8ms
+
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object that returns a valid partial path.):
+    19:   </tr>
+    20: 
+    21: <tbody id="posts">
+    22: <%= render @posts %>
+    23: 
+    24: <% end %>
+    25: </table>
+  app/views/fortunes/index.html.erb:22:in `block in _app_views_fortunes_index_html_erb___690865793785602902_41108960'
+  app/views/fortunes/index.html.erb:12:in `each'
+  app/views/fortunes/index.html.erb:12:in `_app_views_fortunes_index_html_erb___690865793785602902_41108960'
+  app/controllers/fortunes_controller.rb:7:in `index'
+
+
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-04 19:40:18 +0200
+Processing by FortunesController#index as HTML
+  [1m[36mFortune Load (0.3ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" [0m
+  Rendered fortunes/index.html.erb within layouts/application (3.0ms)
+Completed 500 Internal Server Error in 8ms
+
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object that returns a valid partial path.):
+    19:   </tr>
+    20: 
+    21: <tbody id="posts">
+    22: <%= render @posts %>
+    23: 
+    24: <% end %>
+    25: </table>
+  app/views/fortunes/index.html.erb:22:in `block in _app_views_fortunes_index_html_erb___690865793785602902_41108960'
+  app/views/fortunes/index.html.erb:12:in `each'
+  app/views/fortunes/index.html.erb:12:in `_app_views_fortunes_index_html_erb___690865793785602902_41108960'
+  app/controllers/fortunes_controller.rb:7:in `index'
+
+
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-04 19:40:18 +0200
+Processing by FortunesController#index as HTML
+  [1m[35mFortune Load (0.2ms)[0m  SELECT "fortunes".* FROM "fortunes" 
+  Rendered fortunes/index.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object that returns a valid partial path.):
+    19:   </tr>
+    20: 
+    21: <tbody id="posts">
+    22: <%= render @posts %>
+    23: 
+    24: <% end %>
+    25: </table>
+  app/views/fortunes/index.html.erb:22:in `block in _app_views_fortunes_index_html_erb___690865793785602902_41108960'
+  app/views/fortunes/index.html.erb:12:in `each'
+  app/views/fortunes/index.html.erb:12:in `_app_views_fortunes_index_html_erb___690865793785602902_41108960'
+  app/controllers/fortunes_controller.rb:7:in `index'
+
+
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.7ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-04 19:40:18 +0200
+Processing by FortunesController#index as HTML
+  [1m[36mFortune Load (0.5ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" [0m
+  Rendered fortunes/index.html.erb within layouts/application (2.9ms)
+Completed 500 Internal Server Error in 8ms
+
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object that returns a valid partial path.):
+    19:   </tr>
+    20: 
+    21: <tbody id="posts">
+    22: <%= render @posts %>
+    23: 
+    24: <% end %>
+    25: </table>
+  app/views/fortunes/index.html.erb:22:in `block in _app_views_fortunes_index_html_erb___690865793785602902_41108960'
+  app/views/fortunes/index.html.erb:12:in `each'
+  app/views/fortunes/index.html.erb:12:in `_app_views_fortunes_index_html_erb___690865793785602902_41108960'
+  app/controllers/fortunes_controller.rb:7:in `index'
+
+
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-04 19:43:02 +0200
+Processing by FortunesController#index as HTML
+  [1m[35mFortune Load (0.5ms)[0m  SELECT "fortunes".* FROM "fortunes" 
+  Rendered fortunes/index.html.erb within layouts/application (3.4ms)
+Completed 500 Internal Server Error in 9ms
+
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object that returns a valid partial path.):
+    19:   </tr>
+    20: 
+    21: <tbody id="fortune">
+    22: <%= render @posts %>
+    23: 
+    24: <% end %>
+    25: </table>
+  app/views/fortunes/index.html.erb:22:in `block in _app_views_fortunes_index_html_erb___690865793785602902_40207840'
+  app/views/fortunes/index.html.erb:12:in `each'
+  app/views/fortunes/index.html.erb:12:in `_app_views_fortunes_index_html_erb___690865793785602902_40207840'
+  app/controllers/fortunes_controller.rb:7:in `index'
+
+
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (32.8ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (43.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-04 19:43:21 +0200
+Processing by FortunesController#index as HTML
+  [1m[36mFortune Load (0.5ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" [0m
+  Rendered fortunes/index.html.erb within layouts/application (6.2ms)
+Completed 500 Internal Server Error in 15ms
+
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object that returns a valid partial path.):
+    19:   </tr>
+    20: 
+    21: <tbody id="fortune">
+    22: <%= render @fortune %>
+    23: 
+    24: <% end %>
+    25: </table>
+  app/views/fortunes/index.html.erb:22:in `block in _app_views_fortunes_index_html_erb___690865793785602902_26289540'
+  app/views/fortunes/index.html.erb:12:in `each'
+  app/views/fortunes/index.html.erb:12:in `_app_views_fortunes_index_html_erb___690865793785602902_26289540'
+  app/controllers/fortunes_controller.rb:7:in `index'
+
+
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.6ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-04 19:43:22 +0200
+Processing by FortunesController#index as HTML
+  [1m[35mFortune Load (0.2ms)[0m  SELECT "fortunes".* FROM "fortunes" 
+  Rendered fortunes/index.html.erb within layouts/application (2.3ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object that returns a valid partial path.):
+    19:   </tr>
+    20: 
+    21: <tbody id="fortune">
+    22: <%= render @fortune %>
+    23: 
+    24: <% end %>
+    25: </table>
+  app/views/fortunes/index.html.erb:22:in `block in _app_views_fortunes_index_html_erb___690865793785602902_26289540'
+  app/views/fortunes/index.html.erb:12:in `each'
+  app/views/fortunes/index.html.erb:12:in `_app_views_fortunes_index_html_erb___690865793785602902_26289540'
+  app/controllers/fortunes_controller.rb:7:in `index'
+
+
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-04 19:43:22 +0200
+Processing by FortunesController#index as HTML
+  [1m[36mFortune Load (0.2ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" [0m
+  Rendered fortunes/index.html.erb within layouts/application (2.9ms)
+Completed 500 Internal Server Error in 6ms
+
+ActionView::Template::Error ('nil' is not an ActiveModel-compatible object that returns a valid partial path.):
+    19:   </tr>
+    20: 
+    21: <tbody id="fortune">
+    22: <%= render @fortune %>
+    23: 
+    24: <% end %>
+    25: </table>
+  app/views/fortunes/index.html.erb:22:in `block in _app_views_fortunes_index_html_erb___690865793785602902_26289540'
+  app/views/fortunes/index.html.erb:12:in `each'
+  app/views/fortunes/index.html.erb:12:in `_app_views_fortunes_index_html_erb___690865793785602902_26289540'
+  app/controllers/fortunes_controller.rb:7:in `index'
+
+
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-04 19:43:40 +0200
+Processing by FortunesController#index as HTML
+  [1m[35mFortune Load (0.2ms)[0m  SELECT "fortunes".* FROM "fortunes" 
+  Rendered fortunes/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 18ms (Views: 15.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-04 19:46:23 +0200
+Processing by FortunesController#index as HTML
+  [1m[36mFortune Load (0.2ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" [0m
+  Rendered fortunes/index.html.erb within layouts/application (6.4ms)
+Completed 200 OK in 13ms (Views: 11.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-04 19:46:24 +0200
+Processing by FortunesController#index as HTML
+  [1m[35mFortune Load (0.4ms)[0m  SELECT "fortunes".* FROM "fortunes" 
+  Rendered fortunes/index.html.erb within layouts/application (5.9ms)
+Completed 200 OK in 15ms (Views: 11.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-04 19:46:24 +0200
+Processing by FortunesController#index as HTML
+  [1m[36mFortune Load (0.4ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" [0m
+  Rendered fortunes/index.html.erb within layouts/application (6.6ms)
+Completed 200 OK in 16ms (Views: 13.2ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-04 19:46:25 +0200
+Processing by FortunesController#index as HTML
+  [1m[35mFortune Load (0.3ms)[0m  SELECT "fortunes".* FROM "fortunes" 
+  Rendered fortunes/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 50ms (Views: 47.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-04 19:46:25 +0200
+Processing by FortunesController#index as HTML
+  [1m[36mFortune Load (0.2ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" [0m
+  Rendered fortunes/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 14ms (Views: 11.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-04 19:46:25 +0200
+Processing by FortunesController#index as HTML
+  [1m[35mFortune Load (0.2ms)[0m  SELECT "fortunes".* FROM "fortunes" 
+  Rendered fortunes/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 15ms (Views: 13.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-04 19:49:05 +0200
+Processing by FortunesController#index as HTML
+  [1m[36mFortune Load (0.2ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" [0m
+  Rendered fortunes/index.html.erb within layouts/application (8.3ms)
+Completed 500 Internal Server Error in 38ms
+
+ActionView::Template::Error (couldn't find file 'jquery.ui.core'
+  (in /home/piotr/Pulpit/Ruby/fortunka/app/assets/stylesheets/application.css:17)):
+    2: <html>
+    3: <head>
+    4:   <title>Fortunka</title>
+    5:   <%= stylesheet_link_tag    "application", :media => "all" %>
+    6:   <%= javascript_include_tag "application" %>
+    7:   <%= csrf_meta_tags %>
+    8: <!- zmiany>
+  app/views/layouts/application.html.erb:5:in `_app_views_layouts_application_html_erb__18713963116381781_37658040'
+  app/controllers/fortunes_controller.rb:7:in `index'
+
+
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.2ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-04 19:50:07 +0200
+Processing by FortunesController#index as HTML
+  [1m[35mFortune Load (0.2ms)[0m  SELECT "fortunes".* FROM "fortunes" 
+  Rendered fortunes/index.html.erb within layouts/application (6.4ms)
+Compiled application.css  (1ms)  (pid 2379)
+Compiled application.js  (1ms)  (pid 2379)
+Completed 200 OK in 62ms (Views: 60.3ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/fortunes/new" for 127.0.0.1 at 2012-10-04 19:50:17 +0200
+Processing by FortunesController#new as HTML
+  Rendered fortunes/_form.html.erb (71.1ms)
+  Rendered fortunes/new.html.erb within layouts/application (73.7ms)
+Completed 200 OK in 84ms (Views: 83.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-04 19:57:00 +0200
+Processing by FortunesController#index as HTML
+  [1m[36mFortune Load (0.3ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" [0m
+  Rendered fortunes/index.html.erb within layouts/application (11.1ms)
+Completed 200 OK in 24ms (Views: 21.4ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-04 19:57:12 +0200
+Processing by FortunesController#index as HTML
+  [1m[35mFortune Load (0.3ms)[0m  SELECT "fortunes".* FROM "fortunes" 
+  Rendered fortunes/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 18ms (Views: 14.5ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/fortunes/new" for 127.0.0.1 at 2012-10-04 19:57:14 +0200
+Processing by FortunesController#new as HTML
+  Rendered fortunes/_form.html.erb (3.1ms)
+  Rendered fortunes/new.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 11ms (Views: 9.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-04 20:03:08 +0200
+Processing by FortunesController#index as HTML
+  [1m[36mFortune Load (0.2ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" [0m
+  Rendered fortunes/index.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 15ms (Views: 13.5ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-04 20:03:09 +0200
+Processing by FortunesController#index as HTML
+  [1m[35mFortune Load (0.3ms)[0m  SELECT "fortunes".* FROM "fortunes" 
+  Rendered fortunes/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 13ms (Views: 11.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-04 20:03:09 +0200
+Processing by FortunesController#index as HTML
+  [1m[36mFortune Load (0.2ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" [0m
+  Rendered fortunes/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-04 20:03:10 +0200
+Processing by FortunesController#index as HTML
+  [1m[35mFortune Load (0.2ms)[0m  SELECT "fortunes".* FROM "fortunes" 
+  Rendered fortunes/index.html.erb within layouts/application (6.3ms)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-04 20:03:10 +0200
+Processing by FortunesController#index as HTML
+  [1m[36mFortune Load (0.3ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" [0m
+  Rendered fortunes/index.html.erb within layouts/application (41.8ms)
+Completed 200 OK in 52ms (Views: 49.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-04 20:03:11 +0200
+Processing by FortunesController#index as HTML
+  [1m[35mFortune Load (0.5ms)[0m  SELECT "fortunes".* FROM "fortunes" 
+  Rendered fortunes/index.html.erb within layouts/application (6.2ms)
+Completed 200 OK in 15ms (Views: 11.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-04 20:03:11 +0200
+Processing by FortunesController#index as HTML
+  [1m[36mFortune Load (0.5ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" [0m
+  Rendered fortunes/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 15ms (Views: 12.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/fortunes/new" for 127.0.0.1 at 2012-10-04 20:03:14 +0200
+Processing by FortunesController#new as HTML
+  Rendered fortunes/_form.html.erb (3.3ms)
+  Rendered fortunes/new.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 13ms (Views: 12.4ms | ActiveRecord: 0.0ms)
+Connecting to database specified by database.yml
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Creating scope :page. Overwriting existing method Fortune.page.
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (37.1ms)[0m  [1mINSERT INTO "fortunes" ("created_at", "quotation", "source", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Thu, 04 Oct 2012 18:05:10 UTC +00:00], ["quotation", "I hear and I forget. I see and I remember. I do and I understand."], ["source", nil], ["updated_at", Thu, 04 Oct 2012 18:05:10 UTC +00:00]]
+  [1m[35m (110.4ms)[0m  commit transaction
+  [1m[36m (0.3ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (1.0ms)[0m  INSERT INTO "fortunes" ("created_at", "quotation", "source", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Thu, 04 Oct 2012 18:05:10 UTC +00:00], ["quotation", "Everything has its beauty but not everyone sees it."], ["source", nil], ["updated_at", Thu, 04 Oct 2012 18:05:10 UTC +00:00]]
+  [1m[36m (92.8ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.8ms)[0m  [1mINSERT INTO "fortunes" ("created_at", "quotation", "source", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Thu, 04 Oct 2012 18:05:10 UTC +00:00], ["quotation", "It does not matter how slowly you go so long as you do not stop."], ["source", nil], ["updated_at", Thu, 04 Oct 2012 18:05:10 UTC +00:00]]
+  [1m[35m (95.4ms)[0m  commit transaction
+  [1m[36m (0.1ms)[0m  [1mbegin transaction[0m
+  [1m[35mSQL (0.9ms)[0m  INSERT INTO "fortunes" ("created_at", "quotation", "source", "updated_at") VALUES (?, ?, ?, ?)  [["created_at", Thu, 04 Oct 2012 18:05:10 UTC +00:00], ["quotation", "Study the past if you would define the future."], ["source", nil], ["updated_at", Thu, 04 Oct 2012 18:05:10 UTC +00:00]]
+  [1m[36m (106.6ms)[0m  [1mcommit transaction[0m
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-04 20:06:44 +0200
+Connecting to database specified by database.yml
+Creating scope :page. Overwriting existing method Fortune.page.
+Processing by FortunesController#index as HTML
+  [1m[36mFortune Load (0.2ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" [0m
+  Rendered fortunes/index.html.erb within layouts/application (16.4ms)
+Completed 200 OK in 100ms (Views: 86.8ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 08:37:03 +0200
+Connecting to database specified by database.yml
+Creating scope :page. Overwriting existing method Fortune.page.
+Processing by FortunesController#index as HTML
+  [1m[36mFortune Load (0.2ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" [0m
+  Rendered fortunes/index.html.erb within layouts/application (16.8ms)
+Completed 200 OK in 207ms (Views: 193.3ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/fortunes/new" for 127.0.0.1 at 2012-10-08 08:37:11 +0200
+Processing by FortunesController#new as HTML
+  Rendered fortunes/_form.html.erb (110.9ms)
+  Rendered fortunes/new.html.erb within layouts/application (125.7ms)
+Completed 200 OK in 137ms (Views: 135.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-08 08:54:43 +0200
+Connecting to database specified by database.yml
+Creating scope :page. Overwriting existing method Fortune.page.
+Processing by FortunesController#index as HTML
+  [1m[36mFortune Load (0.2ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" [0m
+  Rendered fortunes/index.html.erb within layouts/application (16.0ms)
+Completed 200 OK in 101ms (Views: 86.9ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/fortunes/5" for 127.0.0.1 at 2012-10-08 08:54:50 +0200
+Processing by FortunesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mFortune Load (0.4ms)[0m  SELECT "fortunes".* FROM "fortunes" WHERE "fortunes"."id" = ? LIMIT 1  [["id", "5"]]
+  Rendered fortunes/show.html.erb within layouts/application (1.9ms)
+Completed 200 OK in 12ms (Views: 7.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2012-10-08 08:54:54 +0200
+Processing by FortunesController#index as HTML
+  [1m[36mFortune Load (0.3ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" [0m
+  Rendered fortunes/index.html.erb within layouts/application (12.6ms)
+Completed 200 OK in 25ms (Views: 21.2ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/fortunes/6" for 127.0.0.1 at 2012-10-08 08:54:59 +0200
+Processing by FortunesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mFortune Load (0.1ms)[0m  SELECT "fortunes".* FROM "fortunes" WHERE "fortunes"."id" = ? LIMIT 1  [["id", "6"]]
+  Rendered fortunes/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 9ms (Views: 6.7ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2012-10-08 08:55:05 +0200
+Processing by FortunesController#index as HTML
+  [1m[36mFortune Load (0.3ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" [0m
+  Rendered fortunes/index.html.erb within layouts/application (45.2ms)
+Completed 200 OK in 53ms (Views: 51.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/fortunes/new" for 127.0.0.1 at 2012-10-08 08:55:08 +0200
+Processing by FortunesController#new as HTML
+  Rendered fortunes/_form.html.erb (14.1ms)
+  Rendered fortunes/new.html.erb within layouts/application (24.8ms)
+Completed 200 OK in 34ms (Views: 31.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2012-10-08 08:55:54 +0200
+Processing by FortunesController#index as HTML
+  [1m[35mFortune Load (0.3ms)[0m  SELECT "fortunes".* FROM "fortunes" 
+  Rendered fortunes/index.html.erb within layouts/application (11.8ms)
+Completed 200 OK in 20ms (Views: 17.8ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2012-10-08 08:55:57 +0200
+Processing by FortunesController#index as HTML
+  [1m[36mFortune Load (0.2ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" [0m
+  Rendered fortunes/index.html.erb within layouts/application (10.8ms)
+Completed 200 OK in 19ms (Views: 16.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2012-10-08 08:55:58 +0200
+Processing by FortunesController#index as HTML
+  [1m[35mFortune Load (0.5ms)[0m  SELECT "fortunes".* FROM "fortunes" 
+  Rendered fortunes/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 19ms (Views: 16.4ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2012-10-08 08:57:32 +0200
+
+SyntaxError (/home/piotr/Pulpit/Ruby/fortunka/app/controllers/fortunes_controller.rb:47: invalid multibyte char (US-ASCII)
+/home/piotr/Pulpit/Ruby/fortunka/app/controllers/fortunes_controller.rb:47: invalid multibyte char (US-ASCII)
+/home/piotr/Pulpit/Ruby/fortunka/app/controllers/fortunes_controller.rb:47: syntax error, unexpected $end, expecting '}'
+...fortune, notice: 'Dodano pomyślnie.' }
+...                               ^):
+  activesupport (3.2.8) lib/active_support/dependencies.rb:469:in `load'
+  activesupport (3.2.8) lib/active_support/dependencies.rb:469:in `block in load_file'
+  activesupport (3.2.8) lib/active_support/dependencies.rb:639:in `new_constants_in'
+  activesupport (3.2.8) lib/active_support/dependencies.rb:468:in `load_file'
+  activesupport (3.2.8) lib/active_support/dependencies.rb:353:in `require_or_load'
+  activesupport (3.2.8) lib/active_support/dependencies.rb:502:in `load_missing_constant'
+  activesupport (3.2.8) lib/active_support/dependencies.rb:192:in `block in const_missing'
+  activesupport (3.2.8) lib/active_support/dependencies.rb:190:in `each'
+  activesupport (3.2.8) lib/active_support/dependencies.rb:190:in `const_missing'
+  activesupport (3.2.8) lib/active_support/inflector/methods.rb:230:in `block in constantize'
+  activesupport (3.2.8) lib/active_support/inflector/methods.rb:229:in `each'
+  activesupport (3.2.8) lib/active_support/inflector/methods.rb:229:in `constantize'
+  activesupport (3.2.8) lib/active_support/dependencies.rb:554:in `get'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:69:in `controller_reference'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:54:in `controller'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:32:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:600:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/cookies.rb:339:in `call'
+  activerecord (3.2.8) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:473:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `_run__4502672498492090356__call__652555382138366939__callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  quiet_assets (1.0.1) lib/quiet_assets.rb:20:in `call_with_quiet_assets'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /home/piotr/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/piotr/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/piotr/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (24.5ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2012-10-08 08:57:33 +0200
+
+SyntaxError (/home/piotr/Pulpit/Ruby/fortunka/app/controllers/fortunes_controller.rb:47: invalid multibyte char (US-ASCII)
+/home/piotr/Pulpit/Ruby/fortunka/app/controllers/fortunes_controller.rb:47: invalid multibyte char (US-ASCII)
+/home/piotr/Pulpit/Ruby/fortunka/app/controllers/fortunes_controller.rb:47: syntax error, unexpected $end, expecting '}'
+...fortune, notice: 'Dodano pomyślnie.' }
+...                               ^):
+  activesupport (3.2.8) lib/active_support/dependencies.rb:469:in `load'
+  activesupport (3.2.8) lib/active_support/dependencies.rb:469:in `block in load_file'
+  activesupport (3.2.8) lib/active_support/dependencies.rb:639:in `new_constants_in'
+  activesupport (3.2.8) lib/active_support/dependencies.rb:468:in `load_file'
+  activesupport (3.2.8) lib/active_support/dependencies.rb:353:in `require_or_load'
+  activesupport (3.2.8) lib/active_support/dependencies.rb:502:in `load_missing_constant'
+  activesupport (3.2.8) lib/active_support/dependencies.rb:192:in `block in const_missing'
+  activesupport (3.2.8) lib/active_support/dependencies.rb:190:in `each'
+  activesupport (3.2.8) lib/active_support/dependencies.rb:190:in `const_missing'
+  activesupport (3.2.8) lib/active_support/inflector/methods.rb:230:in `block in constantize'
+  activesupport (3.2.8) lib/active_support/inflector/methods.rb:229:in `each'
+  activesupport (3.2.8) lib/active_support/inflector/methods.rb:229:in `constantize'
+  activesupport (3.2.8) lib/active_support/dependencies.rb:554:in `get'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:69:in `controller_reference'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:54:in `controller'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:32:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:600:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/cookies.rb:339:in `call'
+  activerecord (3.2.8) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:473:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `_run__4502672498492090356__call__652555382138366939__callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  quiet_assets (1.0.1) lib/quiet_assets.rb:20:in `call_with_quiet_assets'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /home/piotr/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/piotr/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/piotr/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (4.5ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2012-10-08 08:57:53 +0200
+Creating scope :page. Overwriting existing method Fortune.page.
+Processing by FortunesController#index as HTML
+  [1m[36mFortune Load (0.2ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" [0m
+  Rendered fortunes/index.html.erb within layouts/application (13.1ms)
+Completed 200 OK in 31ms (Views: 19.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2012-10-08 09:01:15 +0200
+Processing by FortunesController#index as HTML
+  [1m[35mFortune Load (0.3ms)[0m  SELECT "fortunes".* FROM "fortunes" 
+  Rendered fortunes/index.html.erb within layouts/application (14.4ms)
+Completed 500 Internal Server Error in 19ms
+
+ActionView::Template::Error (undefined method `current_page' for #<Array:0x00000003e420e8>):
+    22: <% end %>
+    23: </table>
+    24: 
+    25: <%= paginate @fortunes %>
+    26: 
+    27: 
+    28: <br />
+  app/views/fortunes/index.html.erb:25:in `_app_views_fortunes_index_html_erb___1251861597220465791_38592660'
+  app/controllers/fortunes_controller.rb:7:in `index'
+
+
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.3ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (100.5ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2012-10-08 09:03:22 +0200
+Connecting to database specified by database.yml
+Creating scope :page. Overwriting existing method Fortune.page.
+Processing by FortunesController#index as HTML
+  [1m[36mFortune Load (0.2ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" [0m
+  Rendered fortunes/index.html.erb within layouts/application (45.5ms)
+Completed 500 Internal Server Error in 94ms
+
+ActionView::Template::Error (undefined method `current_page' for #<Array:0x00000003d083d0>):
+    22: <% end %>
+    23: </table>
+    24: 
+    25: <%= paginate @fortunes %>
+    26: 
+    27: 
+    28: <br />
+  app/views/fortunes/index.html.erb:25:in `_app_views_fortunes_index_html_erb___2905230445091967171_24439080'
+  app/controllers/fortunes_controller.rb:7:in `index'
+
+
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (11.6ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2012-10-08 09:13:05 +0200
+
+SyntaxError (/home/piotr/Pulpit/Ruby/fortunka/app/controllers/fortunes_controller.rb:80: syntax error, unexpected keyword_end, expecting $end):
+  activesupport (3.2.8) lib/active_support/dependencies.rb:469:in `load'
+  activesupport (3.2.8) lib/active_support/dependencies.rb:469:in `block in load_file'
+  activesupport (3.2.8) lib/active_support/dependencies.rb:639:in `new_constants_in'
+  activesupport (3.2.8) lib/active_support/dependencies.rb:468:in `load_file'
+  activesupport (3.2.8) lib/active_support/dependencies.rb:353:in `require_or_load'
+  activesupport (3.2.8) lib/active_support/dependencies.rb:502:in `load_missing_constant'
+  activesupport (3.2.8) lib/active_support/dependencies.rb:192:in `block in const_missing'
+  activesupport (3.2.8) lib/active_support/dependencies.rb:190:in `each'
+  activesupport (3.2.8) lib/active_support/dependencies.rb:190:in `const_missing'
+  activesupport (3.2.8) lib/active_support/inflector/methods.rb:230:in `block in constantize'
+  activesupport (3.2.8) lib/active_support/inflector/methods.rb:229:in `each'
+  activesupport (3.2.8) lib/active_support/inflector/methods.rb:229:in `constantize'
+  activesupport (3.2.8) lib/active_support/dependencies.rb:554:in `get'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:69:in `controller_reference'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:54:in `controller'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:32:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:600:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/cookies.rb:339:in `call'
+  activerecord (3.2.8) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:473:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `_run__2486649136845699203__call__4443467513429052307__callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  quiet_assets (1.0.1) lib/quiet_assets.rb:20:in `call_with_quiet_assets'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /home/piotr/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/piotr/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/piotr/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.6ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2012-10-08 09:13:06 +0200
+
+SyntaxError (/home/piotr/Pulpit/Ruby/fortunka/app/controllers/fortunes_controller.rb:80: syntax error, unexpected keyword_end, expecting $end):
+  activesupport (3.2.8) lib/active_support/dependencies.rb:469:in `load'
+  activesupport (3.2.8) lib/active_support/dependencies.rb:469:in `block in load_file'
+  activesupport (3.2.8) lib/active_support/dependencies.rb:639:in `new_constants_in'
+  activesupport (3.2.8) lib/active_support/dependencies.rb:468:in `load_file'
+  activesupport (3.2.8) lib/active_support/dependencies.rb:353:in `require_or_load'
+  activesupport (3.2.8) lib/active_support/dependencies.rb:502:in `load_missing_constant'
+  activesupport (3.2.8) lib/active_support/dependencies.rb:192:in `block in const_missing'
+  activesupport (3.2.8) lib/active_support/dependencies.rb:190:in `each'
+  activesupport (3.2.8) lib/active_support/dependencies.rb:190:in `const_missing'
+  activesupport (3.2.8) lib/active_support/inflector/methods.rb:230:in `block in constantize'
+  activesupport (3.2.8) lib/active_support/inflector/methods.rb:229:in `each'
+  activesupport (3.2.8) lib/active_support/inflector/methods.rb:229:in `constantize'
+  activesupport (3.2.8) lib/active_support/dependencies.rb:554:in `get'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:69:in `controller_reference'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:54:in `controller'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:32:in `call'
+  journey (1.0.4) lib/journey/router.rb:68:in `block in call'
+  journey (1.0.4) lib/journey/router.rb:56:in `each'
+  journey (1.0.4) lib/journey/router.rb:56:in `call'
+  actionpack (3.2.8) lib/action_dispatch/routing/route_set.rb:600:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.4.1) lib/rack/etag.rb:23:in `call'
+  rack (1.4.1) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/flash.rb:242:in `call'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:205:in `context'
+  rack (1.4.1) lib/rack/session/abstract/id.rb:200:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/cookies.rb:339:in `call'
+  activerecord (3.2.8) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.2.8) lib/active_record/connection_adapters/abstract/connection_pool.rb:473:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/callbacks.rb:28:in `block in call'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `_run__2486649136845699203__call__4443467513429052307__callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:405:in `__run_callback'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:385:in `_run_call_callbacks'
+  activesupport (3.2.8) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.2.8) lib/action_dispatch/middleware/callbacks.rb:27:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/reloader.rb:65:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/remote_ip.rb:31:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/debug_exceptions.rb:16:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/show_exceptions.rb:56:in `call'
+  railties (3.2.8) lib/rails/rack/logger.rb:26:in `call_app'
+  railties (3.2.8) lib/rails/rack/logger.rb:16:in `call'
+  quiet_assets (1.0.1) lib/quiet_assets.rb:20:in `call_with_quiet_assets'
+  actionpack (3.2.8) lib/action_dispatch/middleware/request_id.rb:22:in `call'
+  rack (1.4.1) lib/rack/methodoverride.rb:21:in `call'
+  rack (1.4.1) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.2.8) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.4.1) lib/rack/lock.rb:15:in `call'
+  actionpack (3.2.8) lib/action_dispatch/middleware/static.rb:62:in `call'
+  railties (3.2.8) lib/rails/engine.rb:479:in `call'
+  railties (3.2.8) lib/rails/application.rb:223:in `call'
+  rack (1.4.1) lib/rack/content_length.rb:14:in `call'
+  railties (3.2.8) lib/rails/rack/log_tailer.rb:17:in `call'
+  rack (1.4.1) lib/rack/handler/webrick.rb:59:in `service'
+  /home/piotr/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /home/piotr/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /home/piotr/.rvm/rubies/ruby-1.9.3-p194/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.6ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2012-10-08 09:13:25 +0200
+Creating scope :page. Overwriting existing method Fortune.page.
+Processing by FortunesController#index as HTML
+Completed 500 Internal Server Error in 2ms
+
+NoMethodError (undefined method `search' for #<Class:0x0000000405b500>):
+  app/controllers/fortunes_controller.rb:5:in `index'
+
+
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.4ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2012-10-08 09:13:27 +0200
+Processing by FortunesController#index as HTML
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `search' for #<Class:0x0000000405b500>):
+  app/controllers/fortunes_controller.rb:5:in `index'
+
+
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.3ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2012-10-08 09:13:27 +0200
+Processing by FortunesController#index as HTML
+Completed 500 Internal Server Error in 0ms
+
+NoMethodError (undefined method `search' for #<Class:0x0000000405b500>):
+  app/controllers/fortunes_controller.rb:5:in `index'
+
+
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.5ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2012-10-08 09:14:34 +0200
+Creating scope :page. Overwriting existing method Fortune.page.
+Processing by FortunesController#index as HTML
+Completed 500 Internal Server Error in 2ms
+
+NoMethodError (undefined method `per' for nil:NilClass):
+  app/controllers/fortunes_controller.rb:5:in `index'
+
+
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.5ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2012-10-08 09:14:35 +0200
+Processing by FortunesController#index as HTML
+Completed 500 Internal Server Error in 0ms
+
+NoMethodError (undefined method `per' for nil:NilClass):
+  app/controllers/fortunes_controller.rb:5:in `index'
+
+
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.7ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.2ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2012-10-08 09:14:35 +0200
+Processing by FortunesController#index as HTML
+Completed 500 Internal Server Error in 0ms
+
+NoMethodError (undefined method `per' for nil:NilClass):
+  app/controllers/fortunes_controller.rb:5:in `index'
+
+
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.1ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2012-10-08 09:15:06 +0200
+Creating scope :page. Overwriting existing method Fortune.page.
+Processing by FortunesController#index as HTML
+  [1m[35mFortune Load (0.3ms)[0m  SELECT "fortunes".* FROM "fortunes" ORDER BY source LIMIT 30 OFFSET 0
+Completed 500 Internal Server Error in 43ms
+
+NoMethodError (undefined method `per' for #<ActiveRecord::Relation:0x000000039391c8>):
+  app/controllers/fortunes_controller.rb:5:in `index'
+
+
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.2ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2012-10-08 09:15:07 +0200
+Processing by FortunesController#index as HTML
+  [1m[36mFortune Load (0.5ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" ORDER BY source LIMIT 30 OFFSET 0[0m
+Completed 500 Internal Server Error in 6ms
+
+NoMethodError (undefined method `per' for #<ActiveRecord::Relation:0x00000003e715f0>):
+  app/controllers/fortunes_controller.rb:5:in `index'
+
+
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.6ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2012-10-08 09:15:07 +0200
+Processing by FortunesController#index as HTML
+  [1m[35mFortune Load (0.3ms)[0m  SELECT "fortunes".* FROM "fortunes" ORDER BY source LIMIT 30 OFFSET 0
+Completed 500 Internal Server Error in 4ms
+
+NoMethodError (undefined method `per' for #<ActiveRecord::Relation:0x00000003caf7f8>):
+  app/controllers/fortunes_controller.rb:5:in `index'
+
+
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.5ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2012-10-08 09:15:47 +0200
+Creating scope :page. Overwriting existing method Fortune.page.
+Processing by FortunesController#index as HTML
+  [1m[36mFortune Load (0.2ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" [0m
+  Rendered fortunes/index.html.erb within layouts/application (13.6ms)
+Completed 500 Internal Server Error in 27ms
+
+ActionView::Template::Error (undefined method `current_page' for #<Array:0x00000003ff1998>):
+    22: <% end %>
+    23: </table>
+    24: 
+    25: <%= paginate @fortunes %>
+    26: 
+    27: 
+    28: <br />
+  app/views/fortunes/index.html.erb:25:in `_app_views_fortunes_index_html_erb___2905230445091967171_24439080'
+  app/controllers/fortunes_controller.rb:7:in `index'
+
+
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.3ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.7ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (12.1ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2012-10-08 09:18:28 +0200
+Processing by FortunesController#index as HTML
+  [1m[35mFortune Load (0.4ms)[0m  SELECT "fortunes".* FROM "fortunes" 
+  Rendered fortunes/index.html.erb within layouts/application (14.7ms)
+Completed 200 OK in 33ms (Views: 30.9ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2012-10-08 09:23:37 +0200
+Creating scope :page. Overwriting existing method Fortune.page.
+Processing by FortunesController#index as HTML
+Completed 500 Internal Server Error in 3ms
+
+NoMethodError (undefined method `search' for #<Class:0x00000003d4a398>):
+  app/controllers/fortunes_controller.rb:5:in `index'
+
+
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.2ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2012-10-08 09:23:38 +0200
+Processing by FortunesController#index as HTML
+Completed 500 Internal Server Error in 1ms
+
+NoMethodError (undefined method `search' for #<Class:0x00000003d4a398>):
+  app/controllers/fortunes_controller.rb:5:in `index'
+
+
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.4ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.0ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2012-10-08 09:26:09 +0200
+Creating scope :page. Overwriting existing method Fortune.page.
+Processing by FortunesController#index as HTML
+  [1m[36mFortune Load (0.2ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" ORDER BY source LIMIT 30 OFFSET 0[0m
+Completed 500 Internal Server Error in 13ms
+
+NoMethodError (undefined method `per' for #<ActiveRecord::Relation:0x007f44e4141538>):
+  app/controllers/fortunes_controller.rb:5:in `index'
+
+
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (30.0ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (40.1ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2012-10-08 09:27:26 +0200
+Processing by FortunesController#index as HTML
+  [1m[35mFortune Load (0.3ms)[0m  SELECT "fortunes".* FROM "fortunes" ORDER BY source LIMIT 30 OFFSET 0
+Completed 500 Internal Server Error in 5ms
+
+NoMethodError (undefined method `per' for #<ActiveRecord::Relation:0x0000000301c798>):
+  app/controllers/fortunes_controller.rb:5:in `index'
+
+
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.7ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2012-10-08 09:27:27 +0200
+Processing by FortunesController#index as HTML
+  [1m[36mFortune Load (0.3ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" ORDER BY source LIMIT 30 OFFSET 0[0m
+Completed 500 Internal Server Error in 4ms
+
+NoMethodError (undefined method `per' for #<ActiveRecord::Relation:0x00000003d0b0d0>):
+  app/controllers/fortunes_controller.rb:5:in `index'
+
+
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.0ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2012-10-08 09:27:27 +0200
+Processing by FortunesController#index as HTML
+  [1m[35mFortune Load (0.4ms)[0m  SELECT "fortunes".* FROM "fortunes" ORDER BY source LIMIT 30 OFFSET 0
+Completed 500 Internal Server Error in 6ms
+
+NoMethodError (undefined method `per' for #<ActiveRecord::Relation:0x00000003d97058>):
+  app/controllers/fortunes_controller.rb:5:in `index'
+
+
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.7ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.9ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2012-10-08 09:27:27 +0200
+Processing by FortunesController#index as HTML
+  [1m[36mFortune Load (0.3ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" ORDER BY source LIMIT 30 OFFSET 0[0m
+Completed 500 Internal Server Error in 4ms
+
+NoMethodError (undefined method `per' for #<ActiveRecord::Relation:0x00000003f2e510>):
+  app/controllers/fortunes_controller.rb:5:in `index'
+
+
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.6ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.1ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2012-10-08 09:27:27 +0200
+Processing by FortunesController#index as HTML
+  [1m[35mFortune Load (0.3ms)[0m  SELECT "fortunes".* FROM "fortunes" ORDER BY source LIMIT 30 OFFSET 0
+Completed 500 Internal Server Error in 5ms
+
+NoMethodError (undefined method `per' for #<ActiveRecord::Relation:0x007f44e414dbf8>):
+  app/controllers/fortunes_controller.rb:5:in `index'
+
+
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.6ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2012-10-08 09:27:28 +0200
+Processing by FortunesController#index as HTML
+  [1m[36mFortune Load (0.3ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" ORDER BY source LIMIT 30 OFFSET 0[0m
+Completed 500 Internal Server Error in 4ms
+
+NoMethodError (undefined method `per' for #<ActiveRecord::Relation:0x007f44e428f1d8>):
+  app/controllers/fortunes_controller.rb:5:in `index'
+
+
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.5ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2012-10-08 09:27:28 +0200
+Processing by FortunesController#index as HTML
+  [1m[35mFortune Load (0.4ms)[0m  SELECT "fortunes".* FROM "fortunes" ORDER BY source LIMIT 30 OFFSET 0
+Completed 500 Internal Server Error in 6ms
+
+NoMethodError (undefined method `per' for #<ActiveRecord::Relation:0x000000026ed118>):
+  app/controllers/fortunes_controller.rb:5:in `index'
+
+
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.2ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2012-10-08 09:27:28 +0200
+Processing by FortunesController#index as HTML
+  [1m[36mFortune Load (0.4ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" ORDER BY source LIMIT 30 OFFSET 0[0m
+Completed 500 Internal Server Error in 6ms
+
+NoMethodError (undefined method `per' for #<ActiveRecord::Relation:0x00000003ffc938>):
+  app/controllers/fortunes_controller.rb:5:in `index'
+
+
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.2ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2012-10-08 09:27:28 +0200
+Processing by FortunesController#index as HTML
+  [1m[35mFortune Load (0.3ms)[0m  SELECT "fortunes".* FROM "fortunes" ORDER BY source LIMIT 30 OFFSET 0
+Completed 500 Internal Server Error in 4ms
+
+NoMethodError (undefined method `per' for #<ActiveRecord::Relation:0x0000000356e598>):
+  app/controllers/fortunes_controller.rb:5:in `index'
+
+
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.8ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.0ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2012-10-08 09:27:29 +0200
+Processing by FortunesController#index as HTML
+  [1m[36mFortune Load (0.3ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" ORDER BY source LIMIT 30 OFFSET 0[0m
+Completed 500 Internal Server Error in 5ms
+
+NoMethodError (undefined method `per' for #<ActiveRecord::Relation:0x0000000417a8a0>):
+  app/controllers/fortunes_controller.rb:5:in `index'
+
+
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (35.0ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (45.3ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2012-10-08 09:30:58 +0200
+Connecting to database specified by database.yml
+Creating scope :page. Overwriting existing method Fortune.page.
+Processing by FortunesController#index as HTML
+  [1m[36mFortune Load (0.3ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" ORDER BY source LIMIT 30 OFFSET 0[0m
+Completed 500 Internal Server Error in 17ms
+
+NoMethodError (undefined method `per' for #<ActiveRecord::Relation:0x000000043b6b78>):
+  app/controllers/fortunes_controller.rb:5:in `index'
+
+
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (43.1ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2012-10-08 09:30:59 +0200
+Processing by FortunesController#index as HTML
+  [1m[35mFortune Load (0.4ms)[0m  SELECT "fortunes".* FROM "fortunes" ORDER BY source LIMIT 30 OFFSET 0
+Completed 500 Internal Server Error in 5ms
+
+NoMethodError (undefined method `per' for #<ActiveRecord::Relation:0x000000037f35c0>):
+  app/controllers/fortunes_controller.rb:5:in `index'
+
+
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (12.9ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2012-10-08 09:31:00 +0200
+Processing by FortunesController#index as HTML
+  [1m[36mFortune Load (0.3ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" ORDER BY source LIMIT 30 OFFSET 0[0m
+Completed 500 Internal Server Error in 4ms
+
+NoMethodError (undefined method `per' for #<ActiveRecord::Relation:0x000000045b1ba8>):
+  app/controllers/fortunes_controller.rb:5:in `index'
+
+
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.8ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2012-10-08 09:32:29 +0200
+Processing by FortunesController#index as HTML
+  [1m[35mFortune Load (0.3ms)[0m  SELECT "fortunes".* FROM "fortunes" ORDER BY source LIMIT 30 OFFSET 0
+Completed 500 Internal Server Error in 4ms
+
+NoMethodError (undefined method `per' for #<ActiveRecord::Relation:0x007f4e2401c1f0>):
+  app/controllers/fortunes_controller.rb:5:in `index'
+
+
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.6ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.7ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2012-10-08 09:32:31 +0200
+Processing by FortunesController#index as HTML
+  [1m[36mFortune Load (0.8ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" ORDER BY source LIMIT 30 OFFSET 0[0m
+Completed 500 Internal Server Error in 8ms
+
+NoMethodError (undefined method `per' for #<ActiveRecord::Relation:0x007f4e24123328>):
+  app/controllers/fortunes_controller.rb:5:in `index'
+
+
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.7ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2012-10-08 09:32:31 +0200
+Processing by FortunesController#index as HTML
+  [1m[35mFortune Load (0.3ms)[0m  SELECT "fortunes".* FROM "fortunes" ORDER BY source LIMIT 30 OFFSET 0
+Completed 500 Internal Server Error in 4ms
+
+NoMethodError (undefined method `per' for #<ActiveRecord::Relation:0x007f4e242289d0>):
+  app/controllers/fortunes_controller.rb:5:in `index'
+
+
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.7ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2012-10-08 09:33:30 +0200
+Processing by FortunesController#index as HTML
+  [1m[36mFortune Load (0.3ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" ORDER BY source LIMIT 30 OFFSET 0[0m
+Completed 500 Internal Server Error in 4ms
+
+NoMethodError (undefined method `per' for #<ActiveRecord::Relation:0x00000004304e00>):
+  app/controllers/fortunes_controller.rb:5:in `index'
+
+
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.4ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.2ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2012-10-08 09:33:31 +0200
+Processing by FortunesController#index as HTML
+  [1m[35mFortune Load (0.3ms)[0m  SELECT "fortunes".* FROM "fortunes" ORDER BY source LIMIT 30 OFFSET 0
+Completed 500 Internal Server Error in 4ms
+
+NoMethodError (undefined method `per' for #<ActiveRecord::Relation:0x00000003f59f80>):
+  app/controllers/fortunes_controller.rb:5:in `index'
+
+
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.1ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.5ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2012-10-08 09:33:31 +0200
+Processing by FortunesController#index as HTML
+  [1m[36mFortune Load (0.4ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" ORDER BY source LIMIT 30 OFFSET 0[0m
+Completed 500 Internal Server Error in 5ms
+
+NoMethodError (undefined method `per' for #<ActiveRecord::Relation:0x000000043dbfe0>):
+  app/controllers/fortunes_controller.rb:5:in `index'
+
+
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.9ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (11.6ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2012-10-08 09:33:32 +0200
+Processing by FortunesController#index as HTML
+  [1m[35mFortune Load (0.3ms)[0m  SELECT "fortunes".* FROM "fortunes" ORDER BY source LIMIT 30 OFFSET 0
+Completed 500 Internal Server Error in 5ms
+
+NoMethodError (undefined method `per' for #<ActiveRecord::Relation:0x0000000468f368>):
+  app/controllers/fortunes_controller.rb:5:in `index'
+
+
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (31.3ms)
+  Rendered /home/piotr/.gems/ruby/1.9.1/gems/actionpack-3.2.8/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (41.6ms)
