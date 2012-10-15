@@ -1,0 +1,45 @@
+o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1350334056.2372334:@value{	I"length:EFiI"digest;
+F"%200e1974a7c251851984f5de554cd2cbI"source;
+FI"/*
+   ==|== layout primary styles =================================================
+   Author:
+   ==========================================================================
+*/
+/* line 7, /home/piotr/Pulpit/Pierwszy/app/assets/stylesheets/layout.css.scss */
+html {
+  background: #980000;
+}
+
+/* line 11, /home/piotr/Pulpit/Pierwszy/app/assets/stylesheets/layout.css.scss */
+body {
+  font-size: 16px;
+  line-height: 1.5;
+}
+
+/* line 16, /home/piotr/Pulpit/Pierwszy/app/assets/stylesheets/layout.css.scss */
+div[role="main"] {
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  width: 800px;
+  margin: 0 auto 10px;
+  padding: 2px 18px 18px 18px;
+  background: white;
+}
+
+/* line 24, /home/piotr/Pulpit/Pierwszy/app/assets/stylesheets/layout.css.scss */
+header {
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  width: 800px;
+  margin: 10px auto 10px;
+  padding: 18px;
+  background-color: black;
+  color: #FFF;
+}
+/* line 32, /home/piotr/Pulpit/Pierwszy/app/assets/stylesheets/layout.css.scss */
+header h1 {
+  font-size: 140%;
+}
+;
+FI"_version;
+F"%0add95667aaf73da826239401e31d0da

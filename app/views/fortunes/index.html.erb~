@@ -1,32 +1,35 @@
-<h1>Istniejące fortunki</h1>
+<% title "All fortunes" %>
 
-<table>
-  <tr>
-    <th>Cytat</th>
-    <th>Źródło</th>
-    <th>Opcje</th>
-
-  </tr>
+<%= form_tag fortunes_path, :method => :get, :id => "fortunes_search" do %>
+  <p>
+    <%= text_field_tag :search, params[:search] %>
+    <%= submit_tag "Search", :name => nil %>
+  </p>
+<% end %>
 
 <% @fortunes.each do |fortune| %>
-  <tr>
-    <td><%= fortune.quotation %></td>
-    <td><%= fortune.source %></td>
-    <td><%= link_to 'Show', fortune %></td>
-    <td><%= link_to 'Edit', edit_fortune_path(fortune) %></td>
-    <td><%= link_to 'Destroy', fortune, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-  </tr>
-
-
-
+<article class="index">
+<p style="border-style:dotted; border-color:black;">
+  <div class="attribute">
+    <span class="name">Quotation</span>
+    <span class="value"><%= fortune.quotation %></span>
+  </div>
+    <div class="attribute">
+    <span class="name">Source</span>
+    <span class="value"><%= fortune.source %></span>
+  </div>
+    <div class="links">
+    <%= link_to 'Show', fortune %> |
+    <%= link_to 'Edit', edit_fortune_path(fortune) %> |
+    <%= link_to 'Destroy', fortune, confirm: 'Are you sure?', method: :delete %>
+  </div>
+  </p>
+</article>
 <% end %>
-</table>
 
+<%= paginate @fortunes %>
 
-
-
-<br />
-
-<%= link_to 'Dodaj cytat', new_fortune_path %>
-<br>
-<%= link_to 'O mnie', new_fortune_path %>
+<div class="link">
+  <a href=<%= new_fortune_path %>><input type="submit" value="New Fortune"></a>
+  <!-- <%= link_to 'New Fortune', new_fortune_path %> -->
+</div>

@@ -1,0 +1,35 @@
+$html-background-color: #980000;
+/*
+   ==|== layout primary styles =================================================
+   Author:
+   ==========================================================================
+*/
+html {
+  background: $html-background-color;
+}
+// http://www.smashingmagazine.com/2011/10/07/16-pixels-body-copy-anything-less-costly-mistake/ */
+body {
+  font-size: 16px;
+  line-height: 1.5;
+}
+// width 600px approx. 60 characters per line
+div[role="main"] {
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  width: 800px;
+  margin: 0 auto 10px;
+  padding: 2px 18px 18px 18px;
+  background: white;
+}
+header {
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  width: 800px;
+  margin: 10px auto 10px;
+  padding: 18px;
+  background-color: darken($html-background-color, 32%);
+  color: #FFF;
+  h1 {
+    font-size: 140%;
+  }
+}

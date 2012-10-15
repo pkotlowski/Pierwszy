@@ -1,15 +1,20 @@
-<p id="notice"><%= notice %></p>
+<% title "Show fortune" %>
 
-<p>
-  <b>Cytat</b>
-  <%= @fortune.quotation %>
-</p>
+<% if notice -%>
+<div id="notice"><%= notice %></div>
+<% end -%>
 
-<p>
-  <b>Źródło</b>
-  <%= @fortune.source %>
-</p>
-
-
-<%= link_to 'Edit', edit_fortune_path(@fortune) %> |
-<%= link_to 'Back', fortunes_path %>
+<article class="single">
+  <div class="attribute">
+    <span class="name">Quotation</span>
+    <span class="value"><%= @fortune.quotation %></span>
+  </div>
+  <div class="attribute">
+    <span class="name">Source</span>
+    <span class="value"><%= @fortune.source %></span>
+  </div>
+  <div class="link">
+    <%= link_to 'Edit', edit_fortune_path(@fortune) %> |
+    <%= link_to 'Back', fortunes_path %>
+  </div>
+</article>

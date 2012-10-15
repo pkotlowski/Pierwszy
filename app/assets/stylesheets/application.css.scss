@@ -1,0 +1,61 @@
+/*
+ *= require_self
+ */
+@import "bourbon";
+@import "preamble.css.scss";
+@import "simple-scaffold.css.scss";
+@import "layout.css.scss";
+@import "postamble.css.scss";
+
+nav.pagination {
+  display: block;
+  border: 1px solid black;
+  margin: 2em 0;
+}
+nav.pagination a, nav.pagination .page.current {
+  padding: 4px;
+  text-decoration: none;
+  font-weight: bold;
+}
+nav.pagination .page.current {
+  color: red;
+}
+
+a:link {color:#FF6600;}      /* unvisited link */
+a:visited {color:#FF6600;}  /* visited link */
+a:hover {color:#FF6600;}  /* mouse over link */
+a:active {color:#FF6600;}  /* selected link */
+
+input
+{
+-webkit-border-radius: 5px; /* Safari, Chrome */
+-khtml-border-radius: 5px;    /* Konqueror */
+-moz-border-radius: 5px; /* Firefox */
+border-radius: 5px;
+
+color: #781351;
+background: #fee3ad;
+border: 1px solid #781351
+}
+
+.submit input
+{
+
+//width: 80%;
+//margin-left: auto;
+//margin-right: auto;
+text-align: center;
+
+color: black;
+background: #ffa20f;
+border: 2px outset #d7b9c9;
+}
+
+textarea {
+color: #781351;
+background: #fee3ad;
+border: 1px solid #781351;
+width: 75%;
+margin-left: 5%;
+border: 1px solid #781351;
+}

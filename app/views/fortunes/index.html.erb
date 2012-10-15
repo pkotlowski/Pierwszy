@@ -9,6 +9,7 @@
 
 <% @fortunes.each do |fortune| %>
 <article class="index">
+<p style="border-style:dotted; border-color:black;">
   <div class="attribute">
     <span class="name">Quotation</span>
     <span class="value"><%= fortune.quotation %></span>
@@ -22,12 +23,13 @@
     <%= link_to 'Edit', edit_fortune_path(fortune) %> |
     <%= link_to 'Destroy', fortune, confirm: 'Are you sure?', method: :delete %>
   </div>
+  </p>
 </article>
 <% end %>
 
 <%= paginate @fortunes %>
 
 <div class="link">
-  <%= link_to 'New Fortune', new_fortune_path %>
+  <a href="<%= new_fortune_path %>"><input type="submit" value="New Fortune"></a>
+  <!-- <%= link_to 'New Fortune', new_fortune_path %> -->
 </div>
-
