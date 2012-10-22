@@ -1,9 +1,9 @@
-<% title "All fortunes" %>
+<% title "Cytaty bardzo (nie)sławnych ludzi" %>
 
 <%= form_tag fortunes_path, :method => :get, :id => "fortunes_search" do %>
   <p>
     <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag "Search", :name => nil %>
+    <%= submit_tag "Szukaj", :name => nil %>
   </p>
 <% end %>
 
@@ -11,17 +11,17 @@
 <article class="index">
 <p style="border-style:dotted; border-color:black;">
   <div class="attribute">
-    <span class="name">Quotation</span>
+    <span class="name">Cytat</span>
     <span class="value"><%= fortune.quotation %></span>
   </div>
     <div class="attribute">
-    <span class="name">Source</span>
+    <span class="name">Źródło</span>
     <span class="value"><%= fortune.source %></span>
   </div>
     <div class="links">
-    <%= link_to 'Show', fortune %> |
-    <%= link_to 'Edit', edit_fortune_path(fortune) %> |
-    <%= link_to 'Destroy', fortune, confirm: 'Are you sure?', method: :delete %>
+    <%= link_to 'Pokaż', fortune %> |
+    <%= link_to 'Edytuj', edit_fortune_path(fortune) %> |
+    <%= link_to 'Usuń', fortune, confirm: 'Jesteś pewien?', method: :delete %>
   </div>
   </p>
 </article>
@@ -30,6 +30,6 @@
 <%= paginate @fortunes %>
 
 <div class="link">
-  <a href=<%= new_fortune_path %>><input type="submit" value="New Fortune"></a>
+  <a href="<%= new_fortune_path %>"><input type="submit" value="New Fortune"></a>
   <!-- <%= link_to 'New Fortune', new_fortune_path %> -->
 </div>

@@ -14,5 +14,20 @@
 
 
 
+nav.pagination {
+  display: block;
+  margin: 2em 0;
+}
+nav.pagination a, nav.pagination .page.current {
+  padding: 4px;
+font-size: 90;
+font-family:"Times new Roman";
+  text-decoration: none;
+  font-weight: bold;
+}
+nav.pagination .page.current {
+font-size: 90;  
+color: red;
 
+}
 

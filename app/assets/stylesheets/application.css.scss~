@@ -9,6 +9,7 @@
 
 nav.pagination {
   display: block;
+  border: 1px solid black;
   margin: 2em 0;
 }
 nav.pagination a, nav.pagination .page.current {

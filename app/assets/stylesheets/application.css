@@ -20,10 +20,14 @@ nav.pagination {
 }
 nav.pagination a, nav.pagination .page.current {
   padding: 4px;
+
+font-family:"Times new Roman";
   text-decoration: none;
   font-weight: bold;
 }
 nav.pagination .page.current {
-  color: red;
+
+color: blue;
+
 }
 
