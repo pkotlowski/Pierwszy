@@ -1,0 +1,194 @@
+/* kaminari – http://www.colourlovers.com/palette/1515564/rainbow_:)) */
+
+nav.pagination {
+  display: block;
+  margin: 2em 0;
+}
+
+nav.pagination a, nav.pagination .page.current {
+  padding: 4px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+nav.pagination .page.current {
+  color: red;
+}
+
+/* 1.375 * 16px = 22px */
+
+body { font:16px/1.375 sans-serif; *font-size:small; }
+
+body {
+ background-image:url('66.jpg');
+}
+
+body {
+
+  width: 800px;
+  margin: 0 auto;
+  padding: 0 1em;
+  border: 1px solid black;
+}
+
+h1 {
+  font-size: 200%;
+  margin: 0.5em 0;
+}
+
+/* simple form */
+
+input[type="text"], textarea {
+  font: inherit;
+}
+
+div.input, input, textarea, label {
+  float: left;
+}
+div.input {
+  width: 100%;
+}
+
+div.input, input.button {
+  margin: 0.5em 0;
+}
+label {
+  width: 4em;
+}
+input.button {
+  margin-left: 4em;
+}
+.hint {
+  margin-left: 2em;
+}
+
+.clear {
+  clear: both;
+}
+
+#notice, #alert {
+  padding: 5px 8px;
+  margin: 10px 0;
+}
+
+#notice {
+#  background-color: #CFC;
+  border: solid 1px #6C6;
+}
+
+#alert {
+  background-color: #FCC;
+  border: solid 1px #C66;
+}
+
+.links {
+  margin: 0.25em 0 1em 0;
+}
+
+/* fortunka */
+
+#fortunes {
+  margin-bottom: 2em;
+}
+#user_nav{
+display:block;
+background-color:#0099CC;
+padding: 35px;
+margin: 55px;
+margin-left: 0px;
+height: 30px;
+width:200px;
+ background-image:url('../images/twitter.png');
+
+}
+#fortunes {
+border-radius:40px 0px 0px 40px;
+-moz-border-radius:40px 0px 0px 40px;
+-webkit-border-radius:40px 0px 0px 40px ;
+-khtml-border-radius:40px 0px 0px 40px ; 
+background-color: #F8F8F8;
+border:1px solid #AAAAFF;
+padding:20px;
+line-height: 1.4em;
+
+}
+
+#fortunes_search {
+  width: 100%;
+  float: right;/*left*/
+  margin: 0.5em 0 2em 0;
+}
+
+/* bug in beta chrome */
+
+b {
+  font-weight: bold;
+}
+
+i {
+  font-style: italic;
+}
+
+/* tag clouds */
+
+.css1 { font-size: 1.0em; }
+.css2 { font-size: 1.2em; }
+.css3 { font-size: 1.4em; }
+.css4 { font-size: 1.6em; }
+
+body {
+  position: relative;
+}
+#nowa{
+background-color: #33CC00;
+background-color: #33CC00; /* green kolor tag clouda */
+  padding: 1em;
+  width: 250px;
+  position: absolute;
+  right: 1em;
+  top: 10em;
+border-radius:20px 20px 20px 20px;
+-moz-border-radius:20px 20px 20px 20px;
+-webkit-border-radius:20px 20px 20px 20px ;
+-khtml-border-radius:20px 20px 20px 20px ;
+
+}
+#tag_cloud {
+  background-color: #33CC00; /* green kolor tag clouda */
+  padding: 1em;
+  width: 250px;
+  position: absolute;
+  right: 1em;
+  top: 1em;
+border-radius:20px 20px 20px 20px;
+-moz-border-radius:20px 20px 20px 20px;
+-webkit-border-radius:20px 20px 20px 20px ;
+-khtml-border-radius:20px 20px 20px 20px ;
+}
+
+/* comments */
+
+#new_comment {
+  overflow: hidden;
+}
+
+html {
+  margin-top: 22px;
+ background-image:url('../images/66.jpg');
+
+  #background-color: #EDE574;
+}
+/* 1.375 * 16px = 22px */
+body { font:16px/1.375 sans-serif; *font-size:small; }
+/* rbates screencasts style */
+body {
+  width: 800px;
+  margin: 0 auto;
+  padding: 0 1em;
+  border: 1px solid black;
+border-radius:20px 20px 20px 20px;
+-moz-border-radius:20px 20px 20px 20px;
+-webkit-border-radius:20px 20px 20px 20px ;
+-khtml-border-radius:20px 20px 20px 20px ;
+
+}

@@ -1,48 +1,32 @@
-<% title "Cytaty bardzo (nie)sławnych ludzi" %>
+<% title "Fortunki" %>
 
-<%= form_tag fortunes_path, :method => :get, :id => "fortunes_search" do %>
+<%= form_tag fortunes_path, :method => :get, :remote => true, :id => "fortunes_search" do %>
   <p>
     <%= text_field_tag :search, params[:search] %>
-    <%= submit_tag "Szukaj", :name => nil %>
+    <%= submit_tag "Search", :name => nil %>
   </p>
 <% end %>
 
-
-
+<div id="tag_cloud">
+  <% tag_cloud(@tags, %w(css1 css2 css3 css4)) do |tag, css_class| %>
+    <%= link_to tag.name, tags_fortunes_path(:name=>tag.name), :class => css_class %>
+  <% end %>
+</div>
+<div id="user_nav">
 <% if current_user %>
   Welcome <%= current_user.name %>!
   <%= link_to "Sign Out", signout_path %>
 <% else %>
   <%= link_to "Sign in with Twitter", "/auth/twitter" %>
 <% end %>
+</div>
+<div id="fortunes">
+  <%= render :partial => 'fortune', :collection => @fortunes %>
+</div>
+<div id="nowa">
 
-
-
-
-
-<% @fortunes.each do |fortune| %>
-<article class="index">
-<p style="border-style:dotted; border-color:black;">
-  <div class="attribute">
-    <span class="name">Cytat</span>
-    <span class="value"><%= fortune.quotation %></span>
-  </div>
-    <div class="attribute">
-    <span class="name">Źródło</span>
-    <span class="value"><%= fortune.source %></span>
-  </div>
-    <div class="links">
-    <%= link_to 'Pokaż', fortune %> |
-    <%= link_to 'Edytuj', edit_fortune_path(fortune) %> |
-    <%= link_to 'Usuń', fortune, confirm: 'Jesteś pewien?', method: :delete %>
-  </div>
-  </p>
-</article>
-<% end %>
-
-<%= paginate @fortunes %>
-
-<div class="link">
-  <a href="<%= new_fortune_path %>"><input type="submit" value="New Fortune"></a>
-  <!-- <%= link_to 'New Fortune', new_fortune_path %> -->
+<p><%= link_to "New Fortune", new_fortune_path %></p>
+</div>
+<div id="paginator">
+  <%= paginate @fortunes, :remote => true %>
 </div>
