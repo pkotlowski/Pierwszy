@@ -2444,3 +2444,365 @@ Rendered /home/piotr/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.6/lib/action_
 
 
 Started GET "/auth/twitter" for 127.0.0.1 at 2012-10-30 12:43:38 +0100
+
+
+Started GET "/stylesheets/66.jpg" for 127.0.0.1 at 2012-10-30 12:58:04 +0100
+
+ActionController::RoutingError (No route matches "/stylesheets/66.jpg"):
+  
+
+Rendered /home/piotr/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.9ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-30 12:58:06 +0100
+  Processing by FortunesController#index as HTML
+  [1m[36mSQL (0.6ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.3ms)[0m  SELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mFortune Load (0.3ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" ORDER BY author LIMIT 2 OFFSET 0[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.3ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 5) AND ("taggings".taggable_type = 'Fortune')) AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)
+Rendered fortunes/_fortune.html.erb (154.9ms)
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "fortunes"[0m
+Rendered fortunes/index.html.erb within layouts/application (234.3ms)
+Completed 200 OK in 373ms (Views: 237.3ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/stylesheets/66.jpg" for 127.0.0.1 at 2012-10-30 12:58:07 +0100
+
+ActionController::RoutingError (No route matches "/stylesheets/66.jpg"):
+  
+
+Rendered /home/piotr/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.3ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-30 12:58:08 +0100
+  Processing by FortunesController#index as HTML
+  [1m[35mSQL (0.5ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mFortune Load (0.3ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" ORDER BY author LIMIT 2 OFFSET 0[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.3ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 5) AND ("taggings".taggable_type = 'Fortune')) AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)
+Rendered fortunes/_fortune.html.erb (60.7ms)
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "fortunes"[0m
+Rendered fortunes/index.html.erb within layouts/application (107.4ms)
+Completed 200 OK in 150ms (Views: 110.8ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/stylesheets/66.jpg" for 127.0.0.1 at 2012-10-30 12:58:09 +0100
+
+ActionController::RoutingError (No route matches "/stylesheets/66.jpg"):
+  
+
+Rendered /home/piotr/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-30 12:58:09 +0100
+  Processing by FortunesController#index as HTML
+  [1m[35mSQL (0.5ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mFortune Load (0.3ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" ORDER BY author LIMIT 2 OFFSET 0[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.3ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 5) AND ("taggings".taggable_type = 'Fortune')) AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)
+Rendered fortunes/_fortune.html.erb (26.8ms)
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "fortunes"[0m
+Rendered fortunes/index.html.erb within layouts/application (72.0ms)
+Completed 200 OK in 150ms (Views: 75.3ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/stylesheets/66.jpg" for 127.0.0.1 at 2012-10-30 12:58:09 +0100
+
+ActionController::RoutingError (No route matches "/stylesheets/66.jpg"):
+  
+
+Rendered /home/piotr/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-10-30 12:58:10 +0100
+  Processing by FortunesController#index as HTML
+  [1m[35mSQL (0.5ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mFortune Load (0.2ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" ORDER BY author LIMIT 2 OFFSET 0[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.3ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 5) AND ("taggings".taggable_type = 'Fortune')) AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)
+Rendered fortunes/_fortune.html.erb (60.7ms)
+  [1m[36mSQL (0.1ms)[0m  [1mSELECT COUNT(*) FROM "fortunes"[0m
+Rendered fortunes/index.html.erb within layouts/application (105.0ms)
+Completed 200 OK in 147ms (Views: 108.5ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/stylesheets/66.jpg" for 127.0.0.1 at 2012-10-30 12:58:10 +0100
+
+ActionController::RoutingError (No route matches "/stylesheets/66.jpg"):
+  
+
+Rendered /home/piotr/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.3ms)
+
+
+Started GET "/fortunes/new" for 127.0.0.1 at 2012-10-30 12:58:11 +0100
+  Processing by FortunesController#new as HTML
+  [1m[35mSQL (0.5ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = NULL) AND ("taggings".taggable_type = 'Fortune')) AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+Rendered fortunes/_form.html.erb (234.2ms)
+Rendered fortunes/new.html.erb within layouts/application (238.8ms)
+Completed 200 OK in 314ms (Views: 243.2ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/stylesheets/66.jpg" for 127.0.0.1 at 2012-10-30 12:58:11 +0100
+
+ActionController::RoutingError (No route matches "/stylesheets/66.jpg"):
+  
+
+Rendered /home/piotr/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.3ms)
+
+
+Started POST "/fortunes" for 127.0.0.1 at 2012-10-30 12:59:10 +0100
+  Processing by FortunesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uUcdm9XJFrNv/8buQdsCJCJ8tKcM5CJT+iUmkHhJreA=", "fortune"=>{"author"=>"gazeta.pl", "body"=>"W protokole komisji Jerzego Millera z 26 lipca 2011 r. badającej przyczyny katastrofy podano, że na pokładzie samolotu znajdowały się materiały pirotechniczne, tzw. pironaboje. - Tego rodzaju pironaboje na pewno nie zawierają trotylu, bo to jest typ materiały wybuchowego kruszący - wyjaśnił w rozmowie z TOK FM ekspert z \"Przeglądu Lotniczego\". ", "tag_list"=>"gazeta tupolew"}, "commit"=>"Create Fortune"}
+  [1m[35mSQL (0.5ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mFortune Load (0.2ms)[0m  [1mSELECT "fortunes"."id" FROM "fortunes" WHERE (LOWER("fortunes"."body") = LOWER('W protokole komisji Jerzego Millera z 26 lipca 2011 r. badającej przyczyny katastrofy podano, że na pokładzie samolotu znajdowały się materiały pirotechniczne, tzw. pironaboje. - Tego rodzaju pironaboje na pewno nie zawierają trotylu, bo to jest typ materiały wybuchowego kruszący - wyjaśnił w rozmowie z TOK FM ekspert z "Przeglądu Lotniczego". ')) LIMIT 1[0m
+Rendered fortunes/_form.html.erb (15.4ms)
+Rendered fortunes/new.html.erb within layouts/application (20.1ms)
+Completed 200 OK in 120ms (Views: 24.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/66.jpg" for 127.0.0.1 at 2012-10-30 12:59:11 +0100
+
+ActionController::RoutingError (No route matches "/stylesheets/66.jpg"):
+  
+
+Rendered /home/piotr/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started POST "/fortunes" for 127.0.0.1 at 2012-10-30 12:59:26 +0100
+  Processing by FortunesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uUcdm9XJFrNv/8buQdsCJCJ8tKcM5CJT+iUmkHhJreA=", "fortune"=>{"author"=>"gazeta.pl", "body"=>"W protokole komisji Jerzego Millera z 26 lipca 2011 r. badającej przyczyny katastrofy podano, że na pokładzie samolotu znajdowały się materiały pirotechniczne, tzw. pironaboje.", "tag_list"=>"gazeta tupolew"}, "commit"=>"Create Fortune"}
+  [1m[35mSQL (0.5ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mFortune Load (0.2ms)[0m  [1mSELECT "fortunes"."id" FROM "fortunes" WHERE (LOWER("fortunes"."body") = LOWER('W protokole komisji Jerzego Millera z 26 lipca 2011 r. badającej przyczyny katastrofy podano, że na pokładzie samolotu znajdowały się materiały pirotechniczne, tzw. pironaboje.')) LIMIT 1[0m
+Rendered fortunes/_form.html.erb (14.6ms)
+Rendered fortunes/new.html.erb within layouts/application (19.2ms)
+Completed 200 OK in 114ms (Views: 23.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/66.jpg" for 127.0.0.1 at 2012-10-30 12:59:26 +0100
+
+ActionController::RoutingError (No route matches "/stylesheets/66.jpg"):
+  
+
+Rendered /home/piotr/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started POST "/fortunes" for 127.0.0.1 at 2012-10-30 12:59:40 +0100
+  Processing by FortunesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uUcdm9XJFrNv/8buQdsCJCJ8tKcM5CJT+iUmkHhJreA=", "fortune"=>{"author"=>"gazeta.pl", "body"=>"W protokole komisji Jerzego Millera z 26 lipca 2011 r. badającej przyczyny katastrofy podano, że na pokładzie samolotu znajdowały się materiały pirotechniczne", "tag_list"=>"gazeta tupolew"}, "commit"=>"Create Fortune"}
+  [1m[35mSQL (0.5ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mFortune Load (0.2ms)[0m  [1mSELECT "fortunes"."id" FROM "fortunes" WHERE (LOWER("fortunes"."body") = LOWER('W protokole komisji Jerzego Millera z 26 lipca 2011 r. badającej przyczyny katastrofy podano, że na pokładzie samolotu znajdowały się materiały pirotechniczne')) LIMIT 1[0m
+Rendered fortunes/_form.html.erb (14.7ms)
+Rendered fortunes/new.html.erb within layouts/application (53.3ms)
+Completed 200 OK in 114ms (Views: 57.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/stylesheets/66.jpg" for 127.0.0.1 at 2012-10-30 12:59:40 +0100
+
+ActionController::RoutingError (No route matches "/stylesheets/66.jpg"):
+  
+
+Rendered /home/piotr/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.6ms)
+
+
+Started POST "/fortunes" for 127.0.0.1 at 2012-10-30 12:59:49 +0100
+  Processing by FortunesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uUcdm9XJFrNv/8buQdsCJCJ8tKcM5CJT+iUmkHhJreA=", "fortune"=>{"author"=>"gazeta.pl", "body"=>"W protokole komisji Jerzego Millera z 26 lipca 2011 r. badającej przyczyny katastrofy podano, że na pokładzie samolotu ", "tag_list"=>"gazeta tupolew"}, "commit"=>"Create Fortune"}
+  [1m[35mSQL (0.5ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mFortune Load (0.2ms)[0m  [1mSELECT "fortunes"."id" FROM "fortunes" WHERE (LOWER("fortunes"."body") = LOWER('W protokole komisji Jerzego Millera z 26 lipca 2011 r. badającej przyczyny katastrofy podano, że na pokładzie samolotu ')) LIMIT 1[0m
+  [1m[35mAREL (0.3ms)[0m  INSERT INTO "fortunes" ("author", "body", "created_at", "updated_at") VALUES ('gazeta.pl', 'W protokole komisji Jerzego Millera z 26 lipca 2011 r. badającej przyczyny katastrofy podano, że na pokładzie samolotu ', '2012-10-30 11:59:49.207610', '2012-10-30 11:59:49.207610')
+  [1m[36mActsAsTaggableOn::Tag Load (0.1ms)[0m  [1mSELECT "tags".* FROM "tags" WHERE (name LIKE 'gazeta' OR name LIKE 'tupolew')[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags"."id" FROM "tags" WHERE ("tags"."name" = 'gazeta') LIMIT 1
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO "tags" ("name") VALUES ('gazeta')[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags"."id" FROM "tags" WHERE ("tags"."name" = 'tupolew') LIMIT 1
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO "tags" ("name") VALUES ('tupolew')[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 6) AND ("taggings".taggable_type = 'Fortune')) AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)
+  [1m[36mActsAsTaggableOn::Tagging Load (0.2ms)[0m  [1mSELECT "taggings".* FROM "taggings" WHERE "taggings"."tagger_type" IS NULL AND "taggings"."tagger_id" IS NULL AND "taggings"."context" = 'tags' AND "taggings"."tag_id" IN (NULL) AND ("taggings".taggable_id = 6 AND "taggings".taggable_type = 'Fortune')[0m
+  [1m[35mActsAsTaggableOn::Tagging Load (0.2ms)[0m  SELECT "taggings"."id" FROM "taggings" WHERE "taggings"."taggable_type" = 'Fortune' AND "taggings"."taggable_id" = 6 AND "taggings"."context" = 'tags' AND "taggings"."tagger_id" IS NULL AND "taggings"."tagger_type" IS NULL AND ("taggings"."tag_id" = 6) LIMIT 1
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "taggings" ("tag_id", "taggable_id", "taggable_type", "tagger_id", "tagger_type", "context", "created_at") VALUES (6, 6, 'Fortune', NULL, NULL, 'tags', '2012-10-30 11:59:49.301212')[0m
+  [1m[35mActsAsTaggableOn::Tagging Load (0.1ms)[0m  SELECT "taggings"."id" FROM "taggings" WHERE "taggings"."taggable_type" = 'Fortune' AND "taggings"."taggable_id" = 6 AND "taggings"."context" = 'tags' AND "taggings"."tagger_id" IS NULL AND "taggings"."tagger_type" IS NULL AND ("taggings"."tag_id" = 7) LIMIT 1
+  [1m[36mAREL (0.1ms)[0m  [1mINSERT INTO "taggings" ("tag_id", "taggable_id", "taggable_type", "tagger_id", "tagger_type", "context", "created_at") VALUES (7, 6, 'Fortune', NULL, NULL, 'tags', '2012-10-30 11:59:49.309264')[0m
+Redirected to http://0.0.0.0:3000/fortunes/6
+Completed 302 Found in 336ms
+
+
+Started GET "/fortunes/6" for 127.0.0.1 at 2012-10-30 12:59:49 +0100
+  Processing by FortunesController#show as HTML
+  Parameters: {"id"=>"6"}
+  [1m[35mSQL (0.5ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mFortune Load (0.2ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" WHERE "fortunes"."id" = 6 LIMIT 1[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.3ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 6) AND ("taggings".taggable_type = 'Fortune')) AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE ("comments".fortune_id = 6)[0m
+Rendered comments/_form.html.erb (57.0ms)
+Rendered fortunes/show.html.erb within layouts/application (94.5ms)
+Completed 200 OK in 155ms (Views: 98.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/stylesheets/66.jpg" for 127.0.0.1 at 2012-10-30 12:59:49 +0100
+
+ActionController::RoutingError (No route matches "/stylesheets/66.jpg"):
+  
+
+Rendered /home/piotr/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2012-10-30 12:59:55 +0100
+  Processing by FortunesController#index as HTML
+  [1m[35mSQL (0.5ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mActsAsTaggableOn::Tag Load (0.4ms)[0m  [1mSELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0[0m
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1
+  [1m[36mFortune Load (0.3ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" ORDER BY author LIMIT 2 OFFSET 0[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.3ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 5) AND ("taggings".taggable_type = 'Fortune')) AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 6) AND ("taggings".taggable_type = 'Fortune')) AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+Rendered fortunes/_fortune.html.erb (29.0ms)
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) FROM "fortunes"
+Rendered fortunes/index.html.erb within layouts/application (111.2ms)
+Completed 200 OK in 153ms (Views: 114.2ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/stylesheets/66.jpg" for 127.0.0.1 at 2012-10-30 12:59:55 +0100
+
+ActionController::RoutingError (No route matches "/stylesheets/66.jpg"):
+  
+
+Rendered /home/piotr/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started GET "/fortunes/5" for 127.0.0.1 at 2012-10-30 13:00:00 +0100
+  Processing by FortunesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mFortune Load (0.2ms)[0m  SELECT "fortunes".* FROM "fortunes" WHERE "fortunes"."id" = 5 LIMIT 1
+  [1m[36mActsAsTaggableOn::Tag Load (0.4ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 5) AND ("taggings".taggable_type = 'Fortune')) AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  [1m[35mSQL (0.2ms)[0m  SELECT COUNT(*) FROM "comments" WHERE ("comments".fortune_id = 5)
+Rendered comments/_form.html.erb (21.2ms)
+Rendered fortunes/show.html.erb within layouts/application (58.3ms)
+Completed 200 OK in 157ms (Views: 62.3ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/stylesheets/66.jpg" for 127.0.0.1 at 2012-10-30 13:00:00 +0100
+
+ActionController::RoutingError (No route matches "/stylesheets/66.jpg"):
+  
+
+Rendered /home/piotr/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.2ms)
+
+
+Started POST "/fortunes/5/comments" for 127.0.0.1 at 2012-10-30 13:00:15 +0100
+  Processing by CommentsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"uUcdm9XJFrNv/8buQdsCJCJ8tKcM5CJT+iUmkHhJreA=", "comment"=>{"author"=>"super", "body"=>"spam"}, "commit"=>"Create Comment", "fortune_id"=>"5"}
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mFortune Load (0.2ms)[0m  SELECT "fortunes".* FROM "fortunes" WHERE "fortunes"."id" = 5 LIMIT 1
+  [1m[36mAREL (0.2ms)[0m  [1mINSERT INTO "comments" ("fortune_id", "author", "body", "created_at", "updated_at") VALUES (5, 'super', 'spam', '2012-10-30 12:00:16.060219', '2012-10-30 12:00:16.060219')[0m
+Redirected to http://0.0.0.0:3000/fortunes/5
+Completed 302 Found in 283ms
+
+
+Started GET "/fortunes/5" for 127.0.0.1 at 2012-10-30 13:00:16 +0100
+  Processing by FortunesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mSQL (0.5ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mFortune Load (0.2ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" WHERE "fortunes"."id" = 5 LIMIT 1[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.3ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 5) AND ("taggings".taggable_type = 'Fortune')) AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE ("comments".fortune_id = 5)[0m
+  [1m[35mComment Load (0.1ms)[0m  SELECT "comments".* FROM "comments" WHERE ("comments".fortune_id = 5)
+Rendered comments/_comment.html.erb (9.2ms)
+Rendered comments/_form.html.erb (14.3ms)
+Rendered fortunes/show.html.erb within layouts/application (97.2ms)
+Completed 200 OK in 158ms (Views: 101.2ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/stylesheets/66.jpg" for 127.0.0.1 at 2012-10-30 13:00:16 +0100
+
+ActionController::RoutingError (No route matches "/stylesheets/66.jpg"):
+  
+
+Rendered /home/piotr/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.6ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2012-10-30 13:00:22 +0100
+  Processing by FortunesController#index as HTML
+  [1m[36mSQL (0.5ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.4ms)[0m  SELECT tags.*, COUNT(*) AS count FROM "tags" LEFT OUTER JOIN taggings ON tags.id = taggings.tag_id AND taggings.context = 'tags' INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes")) GROUP BY tags.id, tags.name HAVING COUNT(*) > 0
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" WHERE "users"."id" = 1 LIMIT 1[0m
+  [1m[35mFortune Load (0.3ms)[0m  SELECT "fortunes".* FROM "fortunes" ORDER BY author LIMIT 2 OFFSET 0
+  [1m[36mActsAsTaggableOn::Tag Load (0.3ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 5) AND ("taggings".taggable_type = 'Fortune')) AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 6) AND ("taggings".taggable_type = 'Fortune')) AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)
+Rendered fortunes/_fortune.html.erb (28.8ms)
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "fortunes"[0m
+Rendered fortunes/index.html.erb within layouts/application (75.8ms)
+Completed 200 OK in 155ms (Views: 79.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/stylesheets/66.jpg" for 127.0.0.1 at 2012-10-30 13:00:22 +0100
+
+ActionController::RoutingError (No route matches "/stylesheets/66.jpg"):
+  
+
+Rendered /home/piotr/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
+
+
+Started GET "/fortunes/5" for 127.0.0.1 at 2012-10-30 13:00:26 +0100
+  Processing by FortunesController#show as HTML
+  Parameters: {"id"=>"5"}
+  [1m[35mSQL (0.5ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  [1m[36mFortune Load (0.2ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" WHERE "fortunes"."id" = 5 LIMIT 1[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.3ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags".id = "taggings".tag_id WHERE (("taggings".taggable_id = 5) AND ("taggings".taggable_type = 'Fortune')) AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)
+  [1m[36mSQL (0.2ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE ("comments".fortune_id = 5)[0m
+  [1m[35mComment Load (0.2ms)[0m  SELECT "comments".* FROM "comments" WHERE ("comments".fortune_id = 5)
+Rendered comments/_comment.html.erb (9.7ms)
+Rendered comments/_form.html.erb (50.4ms)
+Rendered fortunes/show.html.erb within layouts/application (100.5ms)
+Completed 200 OK in 164ms (Views: 104.6ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/stylesheets/66.jpg" for 127.0.0.1 at 2012-10-30 13:00:26 +0100
+
+ActionController::RoutingError (No route matches "/stylesheets/66.jpg"):
+  
+
+Rendered /home/piotr/.rvm/gems/ruby-1.9.3-p194/gems/actionpack-3.0.6/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.5ms)
