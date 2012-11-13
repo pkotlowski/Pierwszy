@@ -17,7 +17,7 @@
   Welcome <%= current_user.name %>!
   <%= link_to "Sign Out", signout_path %>
 <% else %>
-  <%= link_to "Sign in with Twitter", "/auth/twitter" %>
+  <%= link_to "Zaloguj się za pomocą Twittera", "/auth/twitter" %>
 <% end %>
 </div>
 <div id="fortunes">
@@ -25,7 +25,7 @@
 </div>
 <div id="nowa">
 
-<p><%= link_to "New Fortune", new_fortune_path %></p>
+<p><%= link_to "Dodaj wiadomość", new_fortune_path %></p>
 </div>
 <div id="paginator">
   <%= paginate @fortunes, :remote => true %>

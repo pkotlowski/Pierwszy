@@ -3,6 +3,6 @@
   <%= comment.body %>
 </div>
 <p class="links">
-  <%= link_to 'Edit', edit_fortune_comment_path(@fortune, comment) %> |
-  <%= link_to "Delete", [@fortune, comment], :confirm => t('helpers.data.sure'), :method => :delete %>
+  <%= link_to 'Edytuj', edit_fortune_comment_path(@fortune, comment) %> |
+  <%= link_to "Usuń", [@fortune, comment], :confirm => t('helpers.data.sure'), :method => :delete %>
 </p>

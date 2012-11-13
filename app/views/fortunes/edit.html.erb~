@@ -1,4 +1,4 @@
-<% title "Edytowanie" %>
+<% title "Editing fortune" %>
 
 <%= render :partial => 'form' %>
 

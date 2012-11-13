@@ -1,17 +1,17 @@
-<% title "Show fortune" %>
+<% title "NEWS" %>
 
 <p>
-  <b>Author:</b>
+  <b>Autor:</b>
   <%= @fortune.author %>
 </p>
 
 <p>
-  <i>Body:</i>
+  <i>Tresc:</i>
   <%= @fortune.body %>
 </p>
 
 <p>
-  <i>Tags:</i>
+  <i>Tagi:</i>
   <%= @fortune.tag_list %>
 </p>
 
@@ -22,6 +22,6 @@
   <%= render :partial => 'comments/comment', :collection => @fortune.comments %>
 <% end %>
 
-<h2>Add new comment</h2>
+<h2>Dodaj komentarz</h2>
 
 <%= render :partial => 'comments/form' %>

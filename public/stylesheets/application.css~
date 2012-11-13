@@ -15,7 +15,7 @@ nav.pagination .page.current {
   color: black;
 }
 
-
+/* 1.375 * 16px = 22px */
 
 body { font:16px/1.375 sans-serif; *font-size:small; }
 

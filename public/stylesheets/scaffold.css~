@@ -5,7 +5,7 @@ html {
   background-color: #EDE574;
 }
 
-body { background-image:url('../images/66.jpg');} /*kolor tła*/
+body { background-color:#FFFFFF;} /*kolor tła*/
 
 body, p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;

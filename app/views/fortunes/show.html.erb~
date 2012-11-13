@@ -1,15 +1,27 @@
-<p id="notice"><%= notice %></p>
+<% title "Show fortune" %>
 
 <p>
-  <b>Quotation:</b>
-  <%= @fortune.quotation %>
+  <b>Autor:</b>
+  <%= @fortune.author %>
 </p>
 
 <p>
-  <b>Source:</b>
-  <%= @fortune.source %>
+  <i>Tresc:</i>
+  <%= @fortune.body %>
 </p>
 
+<p>
+  <i>Tagi:</i>
+  <%= @fortune.tag_list %>
+</p>
 
-<%= link_to 'Edit', edit_fortune_path(@fortune) %> |
-<%= link_to 'Back', fortunes_path %>
+<p class="links"><%= link_to 'Edit', edit_fortune_path(@fortune) %> | <%= link_to 'Back', fortunes_path %></p>
+
+<% if @fortune.comments.any? %>
+  <h2>Comments</h2>
+  <%= render :partial => 'comments/comment', :collection => @fortune.comments %>
+<% end %>
+
+<h2>Dodaj komentarz</h2>
+
+<%= render :partial => 'comments/form' %>

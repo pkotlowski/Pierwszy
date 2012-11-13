@@ -1,8 +1,5 @@
-<% title "New fortune" %>
+<% title "Nowy NEWS" %>
 
-<div class="form new">
-  <%= render 'form' %>
-  <div class="link">
-    <%= link_to 'Back', fortunes_path %>
-  </div>
-</form>
+<%= render :partial => 'form' %>
+
+<p class="links clear"><%= link_to 'Back', fortunes_path %></p>

@@ -1,11 +1,16 @@
 <!doctype html>
-<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]--><!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]--><!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]--><!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]--><!--[if (gt IE 9)|!(IE)]><!--> <html lang="pl" class="no-js"> <!--<![endif]--><head>
+<!--[if lt IE 7 ]> <html lang="en" class="no-js ie6"> <![endif]-->
+<!--[if IE 7 ]>    <html lang="en" class="no-js ie7"> <![endif]-->
+<!--[if IE 8 ]>    <html lang="en" class="no-js ie8"> <![endif]-->
+<!--[if IE 9 ]>    <html lang="en" class="no-js ie9"> <![endif]-->
+<!--[if (gt IE 9)|!(IE)]><!--> <html lang="pl" class="no-js"> <!--<![endif]-->
+<head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 
     <title>Fortunka<%= content_for?(:title) ? " | " + yield(:title) : " na codzień" %></title>
-    <meta name="description" content="fortunki">
-    <meta name="author" content="Włodek Bzyl">
+    <meta name="description" content="aplikacja w ROR">
+    <meta name="author" content="Piotr Kotłowski">
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -16,7 +21,8 @@
 
     <!--[if lt IE 9]>
 	<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-	<![endif]--></head>
+	<![endif]-->
+</head>
     <%= csrf_meta_tag %>
   <body>
 
@@ -36,7 +42,8 @@
     <!--[if lt IE 7 ]>
 	<script src="/javascripts/libs/dd_belatedpng.js"></script>
 	<script> DD_belatedPNG.fix('img, .png_bg');</script>
-	<![endif]--></body>
+	<![endif]-->
+</body>
 
     <%- # change the UA-XXXXX-X to be your site’s ID -%>
     <%- if Rails.env.production? -%>
