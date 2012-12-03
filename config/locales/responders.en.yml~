@@ -2,12 +2,12 @@ en:
   flash:
     actions:
       create:
-        notice: 'Utworzono.'
+        notice: '%{resource_name} was successfully created.'
       update:
-        notice: 'Zaktualizowano.'
+        notice: '%{resource_name} was successfully updated.'
       destroy:
         notice: 'Komentarz usunięto.'
-        alert: 'Błąd.'
+        alert: '%{resource_name} could not be destroyed.'
     fortunes:
       create:
         notice: 'Dodano wiadomość.'

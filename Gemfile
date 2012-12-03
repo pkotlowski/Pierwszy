@@ -3,14 +3,13 @@ source 'http://rubygems.org'
 
 gem 'rails'
 gem 'sqlite3'
-gem 'responders'
-gem 'simple_form'
+gem 'responders'		#ramki z odpowiedziami
+gem 'simple_form'		#formularz do tworzenia
 gem 'kaminari'
 gem 'thin'
 gem 'acts-as-taggable-on'
 gem 'rdoc'
-gem 'kaminari'
-gem 'omniauth', '~> 0.2.0.beta3'
+gem 'omniauth-twitter'
  
 group :development do
   gem 'heroku'

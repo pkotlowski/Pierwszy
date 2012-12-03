@@ -20,7 +20,7 @@ nav.pagination .page.current {
 body { font:16px/1.375 sans-serif; *font-size:small; }
 
 body {
- background-image:url('66.jpg');
+ background-image:url('67.jpg');
 }
 
 body {
@@ -174,7 +174,7 @@ border-radius:20px 20px 20px 20px;
 
 html {
   margin-top: 22px;
- background-image:url('../images/66.jpg'); /*tło ciemne*/
+ background-image:url('../images/67.jpg'); /*tło ciemne*/
 
   #background-color: #EDE574;
 }

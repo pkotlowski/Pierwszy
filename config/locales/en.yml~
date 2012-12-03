@@ -13,6 +13,7 @@ en:
 
   views:
     pagination:
-      previous: "&#x21d0; Poprzednie"
-      next: "Następne &#x21d2;"
-      truncate: ""
+first: "&laquo; Firsfvdft"
+      last: "Last &raquo;"
+      previous: "&lsaquo; Prev"
+      next: "Next &rsaquo;"

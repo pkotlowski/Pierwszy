@@ -15,10 +15,13 @@
 <div id="user_nav">
 <% if current_user %>
   Welcome <%= current_user.name %>!
-  <%= link_to "Sign Out", signout_path %>
+  <%= link_to "Wyloguj", signout_path %>
 <% else %>
   <%= link_to "Zaloguj się za pomocą Twittera", "/auth/twitter" %>
 <% end %>
+
+
+
 </div>
 <div id="fortunes">
   <%= render :partial => 'fortune', :collection => @fortunes %>
@@ -27,6 +30,9 @@
 
 <p><%= link_to "Dodaj wiadomość", new_fortune_path %></p>
 </div>
+
+
+
 <div id="paginator">
   <%= paginate @fortunes, :remote => true %>
 </div>
