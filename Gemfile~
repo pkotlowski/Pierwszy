@@ -9,7 +9,6 @@ gem 'kaminari'
 gem 'thin'
 gem 'acts-as-taggable-on'
 gem 'rdoc'
-gem 'kaminari'
 gem 'omniauth-twitter'
  
 group :development do

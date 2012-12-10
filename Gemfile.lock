@@ -82,6 +82,7 @@ GEM
     omniauth-twitter (0.0.14)
       multi_json (~> 1.3)
       omniauth-oauth (~> 1.0)
+    pg (0.14.1)
     polyglot (0.3.3)
     populator (1.0.0)
     rack (1.4.1)
@@ -122,7 +123,6 @@ GEM
       multi_json (~> 1.0)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
-    sqlite3 (1.3.6)
     thin (1.5.0)
       daemons (>= 1.0.9)
       eventmachine (>= 0.12.6)
@@ -150,11 +150,11 @@ DEPENDENCIES
   kaminari
   nifty-generators
   omniauth-twitter
+  pg
   populator
   rails
   rdoc
   responders
   simple_form
-  sqlite3
   thin
   wirble
