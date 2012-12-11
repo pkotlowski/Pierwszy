@@ -4,7 +4,7 @@
 
 OmniAuth.config.logger = Rails.logger
 
-raw_config = File.read("#{ENV['HOME']}/.credentials/applications.yml")
+raw_config = File.read("#{ENV['HOME']}/.credentials/fortunes.yml")
 
 twitter = YAML.load(raw_config)['twitter']
 Rails.application.config.middleware.use OmniAuth::Builder do
