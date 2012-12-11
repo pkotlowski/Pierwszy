@@ -7,3 +7,7 @@ one:
 two:
   author: MyString
   body: MyText
+
+twitter:
+  omniauth_provider_key: 3Wawo9aEnJOjK1XDirnA
+  omniauth_provider_secret: obmGiVsKb7Jq1XgXtwLrbIXMEHx4Q93iaWakxI9CVQ
