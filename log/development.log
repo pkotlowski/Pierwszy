@@ -11951,3 +11951,72 @@ Migrating to CreateUsers (20111108193013)
   [1m[36m (238.6ms)[0m  [1mcommit transaction[0m
   [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
 Connecting to database specified by database.yml
+Connecting to database specified by database.yml
+
+
+Started GET "/" for 127.0.0.1 at 2012-12-11 12:19:54 +0100
+Processing by FortunesController#index as HTML
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT tags.*, taggings.tags_count AS count FROM "tags" JOIN (SELECT taggings.tag_id, COUNT(taggings.tag_id) AS tags_count FROM "taggings" INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune' AND taggings.context = 'tags') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes" )) GROUP BY taggings.tag_id HAVING COUNT(taggings.tag_id) > 0) AS taggings ON taggings.tag_id = tags.id[0m
+  [1m[35mFortune Load (0.2ms)[0m  SELECT "fortunes".* FROM "fortunes" ORDER BY author LIMIT 2 OFFSET 0
+  Rendered fortunes/_fortune.html.erb (0.0ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "fortunes" [0m
+  Rendered fortunes/index.html.erb within layouts/application (42.6ms)
+Completed 200 OK in 428ms (Views: 162.6ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/fortunes/new" for 127.0.0.1 at 2012-12-11 12:20:01 +0100
+Processing by FortunesController#new as HTML
+  [1m[35mActsAsTaggableOn::Tag Load (0.1ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" IS NULL AND "taggings"."taggable_type" = 'Fortune' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)
+  Rendered fortunes/_form.html.erb (1011.2ms)
+  Rendered fortunes/new.html.erb within layouts/application (1021.4ms)
+Completed 200 OK in 1035ms (Views: 1025.5ms | ActiveRecord: 0.4ms)
+
+
+Started POST "/fortunes" for 127.0.0.1 at 2012-12-11 12:20:09 +0100
+Processing by FortunesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"B4rxMSQXrJc8EWgi4IWpoJnWNRkwp585vZTrpTlMWDo=", "fortune"=>{"author"=>"cf", "body"=>"dwedcfcdf", "tag_list"=>""}, "commit"=>"Zapisz Fortune"}
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" IS NULL AND "taggings"."taggable_type" = 'Fortune' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFortune Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "fortunes" WHERE LOWER("fortunes"."body") = LOWER('dwedcfcdf') LIMIT 1[0m
+  [1m[35m (0.1ms)[0m  rollback transaction
+  Rendered fortunes/_form.html.erb (8.3ms)
+  Rendered fortunes/new.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 43ms (Views: 13.7ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/fortunes" for 127.0.0.1 at 2012-12-11 12:20:13 +0100
+Processing by FortunesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"B4rxMSQXrJc8EWgi4IWpoJnWNRkwp585vZTrpTlMWDo=", "fortune"=>{"author"=>"cfcfc", "body"=>"dwedcfcdf", "tag_list"=>""}, "commit"=>"Zapisz Fortune"}
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" IS NULL AND "taggings"."taggable_type" = 'Fortune' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mFortune Exists (0.1ms)[0m  [1mSELECT 1 AS one FROM "fortunes" WHERE LOWER("fortunes"."body") = LOWER('dwedcfcdf') LIMIT 1[0m
+  [1m[35mSQL (146.2ms)[0m  INSERT INTO "fortunes" ("author", "body", "created_at", "updated_at") VALUES (?, ?, ?, ?)  [["author", "cfcfc"], ["body", "dwedcfcdf"], ["created_at", Tue, 11 Dec 2012 11:20:13 UTC +00:00], ["updated_at", Tue, 11 Dec 2012 11:20:13 UTC +00:00]]
+  [1m[36mActsAsTaggableOn::Tag Load (0.2ms)[0m  [1mSELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 1 AND "taggings"."taggable_type" = 'Fortune' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)[0m
+  [1m[35m (162.0ms)[0m  commit transaction
+Redirected to http://localhost:3000/fortunes/1
+Completed 302 Found in 346ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/fortunes/1" for 127.0.0.1 at 2012-12-11 12:20:14 +0100
+Processing by FortunesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFortune Load (0.2ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" WHERE "fortunes"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 1 AND "taggings"."taggable_type" = 'Fortune' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "comments" WHERE "comments"."fortune_id" = 1[0m
+  Rendered comments/_form.html.erb (8.8ms)
+  Rendered fortunes/show.html.erb within layouts/application (31.0ms)
+Completed 200 OK in 81ms (Views: 46.4ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2012-12-11 12:20:16 +0100
+Processing by FortunesController#index as HTML
+  [1m[35mActsAsTaggableOn::Tag Load (0.3ms)[0m  SELECT tags.*, taggings.tags_count AS count FROM "tags" JOIN (SELECT taggings.tag_id, COUNT(taggings.tag_id) AS tags_count FROM "taggings" INNER JOIN fortunes ON fortunes.id = taggings.taggable_id WHERE (taggings.taggable_type = 'Fortune' AND taggings.context = 'tags') AND (taggings.taggable_id IN(SELECT fortunes.id FROM "fortunes" )) GROUP BY taggings.tag_id HAVING COUNT(taggings.tag_id) > 0) AS taggings ON taggings.tag_id = tags.id
+  [1m[36mFortune Load (0.2ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" ORDER BY author LIMIT 2 OFFSET 0[0m
+  [1m[35mActsAsTaggableOn::Tag Load (0.2ms)[0m  SELECT "tags".* FROM "tags" INNER JOIN "taggings" ON "tags"."id" = "taggings"."tag_id" WHERE "taggings"."taggable_id" = 1 AND "taggings"."taggable_type" = 'Fortune' AND (taggings.context = 'tags' AND taggings.tagger_id IS NULL)
+  Rendered fortunes/_fortune.html.erb (5.2ms)
+  [1m[36m (0.1ms)[0m  [1mSELECT COUNT(*) FROM "fortunes" [0m
+  Rendered fortunes/index.html.erb within layouts/application (13.3ms)
+Completed 200 OK in 25ms (Views: 18.8ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/auth/twitter" for 127.0.0.1 at 2012-12-11 12:20:18 +0100
