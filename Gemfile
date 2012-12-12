@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 source 'http://rubygems.org'
-
+ruby '1.9.3'
 gem 'rails'
 
 gem 'sqlite3', group: :development
