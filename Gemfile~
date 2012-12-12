@@ -2,7 +2,11 @@
 source 'http://rubygems.org'
 
 gem 'rails'
-gem 'pg'
+
+gem 'sqlite3', group: :development
+gem 'pg', group: :production
+gem 'thin'
+
 gem 'responders'		#ramki z odpowiedziami
 gem 'simple_form'		#formularz do tworzenia
 gem 'kaminari'
