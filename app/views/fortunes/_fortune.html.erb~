@@ -1,7 +1,0 @@
-<p><b><%= fortune.author %></b><br><%= fortune.body %></p>
-<p><i>Tags:</i> <%= fortune.tag_list %></p>
-<p class="links">
- <%= link_to "Show", fortune_path(fortune) %> |
- <%= link_to "Edit", edit_fortune_path(fortune) %> |
- <%= link_to "Delete", fortune_path(fortune), :confirm => t('helpers.data.sure'), :method => :delete %>
-</p>

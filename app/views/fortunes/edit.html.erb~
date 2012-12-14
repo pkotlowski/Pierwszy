@@ -1,5 +1,0 @@
-<% title "Editing fortune" %>
-
-<%= render :partial => 'form' %>
-
-<p class="links clear"><%= link_to 'Show', @fortune %> | <%= link_to 'Back', fortunes_path %></p>

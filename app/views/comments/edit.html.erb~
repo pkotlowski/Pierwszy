@@ -1,5 +1,0 @@
-<% title "Editing comment" %>
-<%= render :partial => 'form' %>
-<p class="links clear">
-  <%= link_to 'Show Fortune', @comment.fortune %>
-</p>
