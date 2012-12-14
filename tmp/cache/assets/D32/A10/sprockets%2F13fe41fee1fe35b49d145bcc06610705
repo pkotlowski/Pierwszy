@@ -1,330 +1,0 @@
-o: ActiveSupport::Cache::Entry	:@compressedF:@expires_in0:@created_atf1350386197.911736:@value{I"
-class:EFI"BundledAsset;
-FI"id;
-F"%d99c43c47e2204bf6e73e2e26a8a7ea8I"logical_path;
-FI"application.css;
-TI"pathname;
-FI"1$root/app/assets/stylesheets/application.css;
-FI"content_type;
-FI"text/css;
-FI"
-mtime;
-FI"2012-10-16T13:07:55+02:00;
-FI"	body;
-FI"˘/*
- * This is a manifest file that'll be compiled into application.css, which will include all the files
- * listed below.
- *
- * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
- * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
- *
- * You're free to add application-wide styles to this file and they'll appear at the top of the
- * compiled file, but it's generally better to create a new file per style scope.
- *
-*/
-
-
-
-
-nav.pagination {
-  display: block;
-  margin: 2em 0;
-}
-nav.pagination a, nav.pagination .page.current {
-  padding: 4px;
-
-font-family:"Times new Roman";
-  text-decoration: none;
-  font-weight: bold;
-}
-nav.pagination .page.current {
-
-color: blue;
-
-}
-
-;
-FI"asset_paths;
-F[I"1$root/app/assets/stylesheets/application.css;
-FI"6$root/app/assets/stylesheets/application.css.scss;
-FI".$root/app/assets/stylesheets/fortunes.css;
-FI"3$root/app/assets/stylesheets/fortunes.css.scss;
-FI"1$root/app/assets/stylesheets/layout.css.scss;
-FI"4$root/app/assets/stylesheets/postamble.css.scss;
-FI"3$root/app/assets/stylesheets/preamble.css.scss;
-FI".$root/app/assets/stylesheets/scaffold.css;
-FI"4$root/app/assets/stylesheets/scaffolds.css.scss;
-FI"3$root/app/assets/stylesheets/sessions.css.scss;
-FI":$root/app/assets/stylesheets/simple-scaffold.css.scss;
-FI"dependency_paths;
-F[,{I"	path;
-FI"1$root/app/assets/stylesheets/application.css;
-FI"
-mtime;
-FIu:	Time
-&Ä`&Ü
-:@_zoneI"	CEST;
-T:nano_numiu:nano_deni:submicro"70:offseti I"hexdigest;
-F"%a7d4543d3b88f463ac6d67ee7f8b23a6{I"	path;
-FI"!$root/app/assets/stylesheets;
-FI"
-mtime;
-FIu;&ÄL~
-;I"	CEST;
-T;iÃ;i;" @;i I"hexdigest;
-F"%e4b3c4f2cc6285592a450d1ba383c341{I"	path;
-FI"6$root/app/assets/stylesheets/application.css.scss;
-FI"
-mtime;
-FIu;
-&ÄÅ9Sâ
-;I"	CEST;
-T;iz;i;"7Ä;i I"hexdigest;
-F"%1a2ca7f9e5516e7b2e3f2c07946762cd{I"	path;
-FI"b/home/piotr/.rvm/gems/ruby-1.9.3-p194/gems/bourbon-1.2.0/app/assets/stylesheets/_bourbon.scss;
-FI"
-mtime;
-FIu;*%Äπ–A.
-;I"	CEST;
-T;ig;i;"5ê;i I"hexdigest;
-F"%8d372c4bf6af33142240dabcd18c8405{I"	path;
-FI"/home/piotr/.rvm/gems/ruby-1.9.3-p194/gems/bourbon-1.2.0/app/assets/stylesheets/functions/_deprecated-webkit-gradient.scss;
-FI"
-mtime;
-FIu;*%Äπ–A.
-;I"	CEST;
-T;ig;i;"5ê;i I"hexdigest;
-F"%a30d2c5d43b8ca4610cb89fbf6f5645d{I"	path;
-FI"q/home/piotr/.rvm/gems/ruby-1.9.3-p194/gems/bourbon-1.2.0/app/assets/stylesheets/functions/_golden-ratio.scss;
-FI"
-mtime;
-FIu;*%Äπ–A.
-;I"	CEST;
-T;ig;i;"5ê;i I"hexdigest;
-F"%e88c731aa3491d4264f21e8f50a8f79d{I"	path;
-FI"o/home/piotr/.rvm/gems/ruby-1.9.3-p194/gems/bourbon-1.2.0/app/assets/stylesheets/functions/_grid-width.scss;
-FI"
-mtime;
-FIu;*%Äπ–A.
-;I"	CEST;
-T;ig;i;"5ê;i I"hexdigest;
-F"%f100e71579339397bd5362d7303b2bc5{I"	path;
-FI"o/home/piotr/.rvm/gems/ruby-1.9.3-p194/gems/bourbon-1.2.0/app/assets/stylesheets/functions/_tint-shade.scss;
-FI"
-mtime;
-FIu;*%Äπ–A.
-;I"	CEST;
-T;ig;i;"5ê;i I"hexdigest;
-F"%96283a1a6b6863cd9a3f013894c7fbda{I"	path;
-FI"i/home/piotr/.rvm/gems/ruby-1.9.3-p194/gems/bourbon-1.2.0/app/assets/stylesheets/css3/_animation.scss;
-FI"
-mtime;
-FIu;*%Äπ–A.
-;I"	CEST;
-T;ig;i;"5ê;i I"hexdigest;
-F"%029240ced5000f3702f647a099eb1f08{I"	path;
-FI"j/home/piotr/.rvm/gems/ruby-1.9.3-p194/gems/bourbon-1.2.0/app/assets/stylesheets/css3/_appearance.scss;
-FI"
-mtime;
-FIu;*%Äπ–A.
-;I"	CEST;
-T;ig;i;"5ê;i I"hexdigest;
-F"%6a980b62ace81be7a0714f17ae869337{I"	path;
-FI"p/home/piotr/.rvm/gems/ruby-1.9.3-p194/gems/bourbon-1.2.0/app/assets/stylesheets/css3/_background-image.scss;
-FI"
-mtime;
-FIu;*%Äπ–A.
-;I"	CEST;
-T;ig;i;"5ê;i I"hexdigest;
-F"%7043b9ae9a1eb9fa44d5f2ab35b200f8{I"	path;
-FI"t/home/piotr/.rvm/gems/ruby-1.9.3-p194/gems/bourbon-1.2.0/app/assets/stylesheets/functions/_linear-gradient.scss;
-FI"
-mtime;
-FIu;*%Äπ–A.
-;I"	CEST;
-T;ig;i;"5ê;i I"hexdigest;
-F"%2bc89c7c198f5a668963bffc99b04046{I"	path;
-FI"t/home/piotr/.rvm/gems/ruby-1.9.3-p194/gems/bourbon-1.2.0/app/assets/stylesheets/functions/_radial-gradient.scss;
-FI"
-mtime;
-FIu;*%Äπ–A.
-;I"	CEST;
-T;ig;i;"5ê;i I"hexdigest;
-F"%1afd0c292f3326d1b2d8aad6a2989923{I"	path;
-FI"o/home/piotr/.rvm/gems/ruby-1.9.3-p194/gems/bourbon-1.2.0/app/assets/stylesheets/css3/_background-size.scss;
-FI"
-mtime;
-FIu;*%Äπ–A.
-;I"	CEST;
-T;ig;i;"5ê;i I"hexdigest;
-F"%2b1b5b7da8a164d5a1934e97fa99abac{I"	path;
-FI"l/home/piotr/.rvm/gems/ruby-1.9.3-p194/gems/bourbon-1.2.0/app/assets/stylesheets/css3/_border-image.scss;
-FI"
-mtime;
-FIu;*%Äπ–A.
-;I"	CEST;
-T;ig;i;"5ê;i I"hexdigest;
-F"%6f12562f20f011da657138cbc571cd12{I"	path;
-FI"m/home/piotr/.rvm/gems/ruby-1.9.3-p194/gems/bourbon-1.2.0/app/assets/stylesheets/css3/_border-radius.scss;
-FI"
-mtime;
-FIu;*%Äπ–A.
-;I"	CEST;
-T;ig;i;"5ê;i I"hexdigest;
-F"%003ce17d6dea16b77a22eb7b87ef6cda{I"	path;
-FI"j/home/piotr/.rvm/gems/ruby-1.9.3-p194/gems/bourbon-1.2.0/app/assets/stylesheets/css3/_box-shadow.scss;
-FI"
-mtime;
-FIu;*%Äπ–A.
-;I"	CEST;
-T;ig;i;"5ê;i I"hexdigest;
-F"%ec22a6cb96cd8db3f75f8e35af7ef1cc{I"	path;
-FI"j/home/piotr/.rvm/gems/ruby-1.9.3-p194/gems/bourbon-1.2.0/app/assets/stylesheets/css3/_box-sizing.scss;
-FI"
-mtime;
-FIu;*%Äπ–A.
-;I"	CEST;
-T;ig;i;"5ê;i I"hexdigest;
-F"%dba69bd6b502e8f249acc2e5905d9f2d{I"	path;
-FI"g/home/piotr/.rvm/gems/ruby-1.9.3-p194/gems/bourbon-1.2.0/app/assets/stylesheets/css3/_columns.scss;
-FI"
-mtime;
-FIu;*%Äπ–A.
-;I"	CEST;
-T;ig;i;"5ê;i I"hexdigest;
-F"%9b1f34545fe0f8ce50711c0a86284a14{I"	path;
-FI"h/home/piotr/.rvm/gems/ruby-1.9.3-p194/gems/bourbon-1.2.0/app/assets/stylesheets/css3/_flex-box.scss;
-FI"
-mtime;
-FIu;*%Äπ–A.
-;I"	CEST;
-T;ig;i;"5ê;i I"hexdigest;
-F"%8b4e163750dd5aa22620544edeca3eff{I"	path;
-FI"l/home/piotr/.rvm/gems/ruby-1.9.3-p194/gems/bourbon-1.2.0/app/assets/stylesheets/css3/_inline-block.scss;
-FI"
-mtime;
-FIu;*%Äπ–A.
-;I"	CEST;
-T;ig;i;"5ê;i I"hexdigest;
-F"%4ac0ff82fea557c1d2d102fb92df1f43{I"	path;
-FI"o/home/piotr/.rvm/gems/ruby-1.9.3-p194/gems/bourbon-1.2.0/app/assets/stylesheets/css3/_linear-gradient.scss;
-FI"
-mtime;
-FIu;*%Äπ–A.
-;I"	CEST;
-T;ig;i;"5ê;i I"hexdigest;
-F"%91ef8ab2992f080959a8796606f2d223{I"	path;
-FI"o/home/piotr/.rvm/gems/ruby-1.9.3-p194/gems/bourbon-1.2.0/app/assets/stylesheets/css3/_radial-gradient.scss;
-FI"
-mtime;
-FIu;*%Äπ–A.
-;I"	CEST;
-T;ig;i;"5ê;i I"hexdigest;
-F"%27b823833a524fa499485c6294daf6c1{I"	path;
-FI"i/home/piotr/.rvm/gems/ruby-1.9.3-p194/gems/bourbon-1.2.0/app/assets/stylesheets/css3/_transform.scss;
-FI"
-mtime;
-FIu;*%Äπ–A.
-;I"	CEST;
-T;ig;i;"5ê;i I"hexdigest;
-F"%15766eabe4a0bf59bb9eb98cf76bb964{I"	path;
-FI"j/home/piotr/.rvm/gems/ruby-1.9.3-p194/gems/bourbon-1.2.0/app/assets/stylesheets/css3/_transition.scss;
-FI"
-mtime;
-FIu;*%Äπ–A.
-;I"	CEST;
-T;ig;i;"5ê;i I"hexdigest;
-F"%2d1066c3fcee8bcfee04a64a22d50f50{I"	path;
-FI"h/home/piotr/.rvm/gems/ruby-1.9.3-p194/gems/bourbon-1.2.0/app/assets/stylesheets/addons/_button.scss;
-FI"
-mtime;
-FIu;*%Äπ–A.
-;I"	CEST;
-T;ig;i;"5ê;i I"hexdigest;
-F"%0bd3fc31a276f2f27a98670d8a6f397a{I"	path;
-FI"m/home/piotr/.rvm/gems/ruby-1.9.3-p194/gems/bourbon-1.2.0/app/assets/stylesheets/addons/_font-family.scss;
-FI"
-mtime;
-FIu;*%Äπ–A.
-;I"	CEST;
-T;ig;i;"5ê;i I"hexdigest;
-F"%6fd2e7146bb477f61776f509e4ffaaf6{I"	path;
-FI"s/home/piotr/.rvm/gems/ruby-1.9.3-p194/gems/bourbon-1.2.0/app/assets/stylesheets/addons/_html5-input-types.scss;
-FI"
-mtime;
-FIu;*%Äπ–A.
-;I"	CEST;
-T;ig;i;"5ê;i I"hexdigest;
-F"%abebccf8cea3784de91f9d6e2fc05483{I"	path;
-FI"j/home/piotr/.rvm/gems/ruby-1.9.3-p194/gems/bourbon-1.2.0/app/assets/stylesheets/addons/_position.scss;
-FI"
-mtime;
-FIu;*%Äπ–A.
-;I"	CEST;
-T;ig;i;"5ê;i I"hexdigest;
-F"%969b2b8b6bf23ea146f30e7b4495b1d4{I"	path;
-FI"r/home/piotr/.rvm/gems/ruby-1.9.3-p194/gems/bourbon-1.2.0/app/assets/stylesheets/addons/_timing-functions.scss;
-FI"
-mtime;
-FIu;*%Äπ–A.
-;I"	CEST;
-T;ig;i;"5ê;i I"hexdigest;
-F"%ad663a6cff0286cf36a16af7ede75679{I"	path;
-FI"3$root/app/assets/stylesheets/preamble.css.scss;
-FI"
-mtime;
-FIu;ÃÍÄ  PŒ;I"CET;
-T;iI"hexdigest;
-F"%70dabd449f3df864b0b7edb5e294a7f7{I"	path;
-FI":$root/app/assets/stylesheets/simple-scaffold.css.scss;
-FI"
-mtime;
-FIu;ÃÍÄ  PŒ;I"CET;
-T;iI"hexdigest;
-F"%b29ba1a81b8409bd26d88d53d7b497b2{I"	path;
-FI"1$root/app/assets/stylesheets/layout.css.scss;
-FI"
-mtime;
-FIu;ÃÍÄ  PŒ;I"CET;
-T;iI"hexdigest;
-F"%e3b8a457468f8ad3a81017f977f56ef3{I"	path;
-FI"4$root/app/assets/stylesheets/postamble.css.scss;
-FI"
-mtime;
-FIu;ÃÍÄ  PŒ;I"CET;
-T;iI"hexdigest;
-F"%83a2a15a05252ee3e9bcba7aa68bd767{I"	path;
-FI".$root/app/assets/stylesheets/fortunes.css;
-FI"
-mtime;
-FIu;ã$Ä  †º;I"	CEST;
-T;i I"hexdigest;
-F"%86bc49d9e548d142af31e2cc4a6e56e8{I"	path;
-FI"3$root/app/assets/stylesheets/fortunes.css.scss;
-FI"
-mtime;
-FIu;ÃÍÄ  PŒ;I"CET;
-T;iI"hexdigest;
-F"%28c520fe29d115d97b59971dead6b2ad{I"	path;
-FI".$root/app/assets/stylesheets/scaffold.css;
-FI"
-mtime;
-FIu;
-&Ä#ñõè
-;I"	CEST;
-T;iØ;i;"C;i I"hexdigest;
-F"%7143850c53d4249e10874efd0f447246{I"	path;
-FI"4$root/app/assets/stylesheets/scaffolds.css.scss;
-FI"
-mtime;
-FIu;ÃÍÄ  PŒ;I"CET;
-T;iI"hexdigest;
-F"%63f90038eaeac9d53220578d76ce8e57{I"	path;
-FI"3$root/app/assets/stylesheets/sessions.css.scss;
-FI"
-mtime;
-FIu;&ÄL~
-;I"	CEST;
-T;iÃ;i;" @;i I"hexdigest;
-F"%fb9e10467fc2997329a460ab2cf484d8I"_version;
-F"%46dde6621c301f4928e3b34efee9e3b5
